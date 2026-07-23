@@ -16,8 +16,7 @@
 }
 
 .shadow_img { 
-    margin-top: 100px;
-    height: 100vh - 200px;
+    height: auto;
     width: 679px;
 }
 
@@ -103,10 +102,14 @@
 }
 
 .hero_bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    position:absolute;
+    bottom:40px;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    padding:0 24px;
 }
 
 .social_media {
@@ -126,7 +129,26 @@
 .green_line {
     width: 100px;
     height: 3px;
-    border-width: 4px;
     background: #70E61C;
+}
 
+.hero_scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+
+.scroll_text {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    transform: rotate(90deg);
+    white-space: nowrap;
+}
+
+.scroll_arrow {
+    width: 30px;
+    height: auto;
 }
