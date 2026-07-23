@@ -1,32 +1,66 @@
 .portfolio_section {
     margin-bottom:100px; 
     position: relative;
+    z-index: 1;
+}
+
+.shadow_portfolio {
+    position: absolute; 
+    z-index: 2; 
+    right: 0; 
+    top:-400px; 
+
 }
 
 .portfolio_wrapper {
+    position: relative;
     width: 100%;
     max-width: 1440px;
     padding: 0 24px;
     margin: 0 auto;
     box-sizing: border-box;
     display:flex; 
-    flex-direction: column;
+    flex-direction: column; 
+    z-index: 1;
 }
 
 .portfolio_section_head {
     display:flex; 
     flex-direction: column;
+    gap: 30px; 
+}
+
+.violet_line {
+    width: 68px;
+    height: 4px;
+    background-color: #9747FF;
+}
+
+.portfolio_title_design {
+    display:flex; 
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px; 
+
+}
+
+.portfolio_section_head p {
+    margin-left: 100px; 
+    margin-bottom: 50px; 
 }
 
 .portfolio_grid {
     display:flex; 
     flex-direction: column;
-    gap: 20px; 
+    gap: 50px; 
+    z-index: 20; 
 }
 
 .portfolio_card_row {
     display:flex; 
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px; 
+    
 
 }
 
@@ -53,6 +87,7 @@
     flex-direction:column;
     justify-content:space-between;
     align-items:center;
+    opacity: 0;
     transition:opacity .3s ease;
     background:rgba(20,29,47,0.8);
     
@@ -101,15 +136,26 @@
     color: white;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
 .blueborder {
     border: 1px solid #1CDAE6 ;
+    background-color: transparent;
 }
 
 .violetbutton {
     border: 1px solid #9747FF;
     background-color: #9747FF ;
+}
+
+.blueborder:hover {
+    background-color:#1CDAE6 ;
+}
+
+.violetbutton:hover {
+    background-color: #70E61C;
+    border-color: #70E61C;
 }
 
 

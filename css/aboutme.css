@@ -21,7 +21,8 @@
     left: 0;
     top: 760px;
     width: 100%;
-    height: auto;
+    height:auto; 
+    /* max-height: 600px; */
     z-index: 3;
 }
 
