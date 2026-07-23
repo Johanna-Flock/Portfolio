@@ -1,5 +1,4 @@
 .skills_section {
-    margin:150px 0;
     position: relative;
     z-index: 6;
 }
@@ -7,7 +6,7 @@
 .skills_wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     max-width: 1440px;
     padding: 0 24px;
@@ -28,6 +27,8 @@
     line-height: 120%;
     letter-spacing: 0%;
     text-align: center;
+    width:88px; 
+    height: 101px; 
 }
 
 .skill_card img {
@@ -44,5 +45,5 @@
 .skills_grid {
     display: flex; 
     flex-direction: column;
-    gap: 10px;
+    gap: 80px;
 }
