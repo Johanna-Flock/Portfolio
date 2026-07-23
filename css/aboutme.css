@@ -1,15 +1,12 @@
 .about_section {
-    margin-top: 50px; 
-    margin-bottom: 0px;
     position: relative;
     overflow: visible;
-    padding-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 .about_wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
     max-width: 1440px;
     padding: 0 24px;
@@ -22,7 +19,7 @@
 .about_wave {
     position: absolute;
     left: 0;
-    top: 850px;
+    top: 760px;
     width: 100%;
     height: auto;
     z-index: 3;
@@ -35,7 +32,7 @@
 
 .picture {
     position: relative;
-    margin-top: 350px;
+    margin-top: 300px;
 }
 
 

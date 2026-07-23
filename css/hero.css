@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
+    margin-bottom: 100px;
+  
     
     height:100vh; 
 }
@@ -87,6 +88,11 @@
     letter-spacing: 0%;
     color:white;
     margin-top: 60px;
+}
+
+.hero_btn:hover {
+    transform: scale(1.2);
+    background-color: #9747FF;
 }
 
 .hero_subtitle {
