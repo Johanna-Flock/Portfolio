@@ -1,11 +1,8 @@
 .about_section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 100px; 
     margin-bottom: 0px;
     position: relative;
-    gap:500px; 
+  
 }
 
 .about_section::after {
@@ -22,6 +19,13 @@
     pointer-events: none;
 }
 
+.about_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(calc(100% - 48px), 1440px);
+    margin: 0 auto;
+}
 
 .about_content {
      width: 471px;
@@ -30,23 +34,21 @@
 
 .picture {
     position: relative;
-    width: 593px;
-    height: 700px;
-    margin-top: 200px;
+    margin-top: 350px;
 }
 
 
 .aboutme_img {
     position: relative;
     z-index: 2;
-    width: 100%;
+    width:593px; 
+    height: auto;
     display: block;
-    top:148px; 
 }
 
 .shadow_img_aboutme {
     position: absolute;
-    top: 50px;      
+    top: -70px;      
     left: -26px;   
     width: 120%;
     z-index: 1;
