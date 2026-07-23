@@ -1,0 +1,132 @@
+.hero_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    
+    height:100vh; 
+}
+
+.hero_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.shadow_img { 
+    margin-top: 100px;
+    height: 100vh - 200px;
+    width: 679px;
+}
+
+.hero_container  {
+    /* margin-top: 300px;  */
+    /* height: 610px;  */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+.hero_content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1025px; 
+}
+
+.Iam {
+    transform: rotate(-90deg);
+    font-size: 90px;
+    color: white;
+    white-space: nowrap;
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0%;
+    margin: 0;
+}
+
+.hero_title {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 128px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.hero_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:20px; 
+}
+
+.hero_btn {
+    width: 165px;
+    height: 58px;
+    gap: 10px;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    background: #70E61C;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 23px; 
+    line-height: 120%;
+    letter-spacing: 0%;
+    color:white;
+    margin-top: 60px;
+}
+
+.hero_subtitle {
+    width: 683px;
+    height: 69px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 64px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color:#9747FF; 
+}
+
+.hero_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.social_media {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:42px; 
+    height:40px; 
+    width: 373px; 
+}
+
+.social_media_icon {
+    width: 30px;
+    height: 30px;
+}
+
+.green_line {
+    width: 100px;
+    height: 3px;
+    border-width: 4px;
+    background: #70E61C;
+
+}

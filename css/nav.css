@@ -1,0 +1,81 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    background: #141D2F;
+    z-index: 10000;
+}
+
+.navbar_container {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_hero_img {
+    width: 150px;
+    height: 28px;
+}
+
+.navbar_menu {
+    width: 510px;
+    height: 35px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav_links {
+    width: 326px;
+    height: 32px;
+    font-family: Poppins;
+    font-weight: 400;
+    /* font-style: Regular; */
+    font-size: 23px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.language_switch {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+}
+
+.language_btn {
+    border: 1px solid #70E61C;
+    width: 38px;
+    height: 32px;
+    gap: 5px;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: transparent;
+
+}
+
+.active {
+    background-color: #70E61C;
+}
