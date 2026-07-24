@@ -35,13 +35,9 @@
 .portfolio_section_head {
     display:flex; 
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     gap: 30px; 
-}
-
-.violet_line {
-    width: 68px;
-    height: 4px;
-    background-color: #9747FF;
 }
 
 .portfolio_title_design {

@@ -1,0 +1,23 @@
+.green_line {
+    width: 100px;
+    height: 3px;
+    background: #70E61C;
+}
+
+.blue_line {
+    width: 287px;
+    height: 4px;
+    background-color:#1CDAE6;
+}
+
+.violet_line {
+    width: 68px;
+    height: 4px;
+    background-color: #9747FF;
+}
+
+.green_line_contact {
+    width: 500px;
+    height: 3px;
+    background: #70E61C;
+}

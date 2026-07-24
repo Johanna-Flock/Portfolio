@@ -49,12 +49,6 @@
     gap: 80px;
 }
 
-.blue_line {
-    width: 287px;
-    height: 4px;
-    background-color:#1CDAE6;
-}
-
 .skills_headline {
     display: flex; 
     align-items: center;
