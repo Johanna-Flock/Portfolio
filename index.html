@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
 
 </head>
 
@@ -74,9 +75,15 @@
         <div class="hero_bottom">
             <div class="social_media">
                 <div class="green_line"></div>
-                <img src="icons/github button.png" alt="GitHub" class="social_media_icon">
-                <img src="icons/email button.png" alt="Email" class="social_media_icon">
-                <img src="icons/linkedin button.png" alt="LinkedIn" class="social_media_icon">
+                <a href="https://github.com/Johanna-Flock" target="_blank">
+                    <img src="icons/github button.png" alt="GitHub" class="social_media_icon">
+                </a>
+                <a href="mailto:johanna.j.f@web.de">
+                    <img src="icons/email button.png" alt="Email" class="social_media_icon">
+                </a>
+                <a href="https://www.linkedin.com/in/dein-profil/" target="_blank">
+                    <img src="icons/linkedin button.png" alt="LinkedIn" class="social_media_icon">
+                </a>
             </div>
             <div class="hero_scroll">
                 <span class="scroll_text">Scroll down</span>
@@ -215,7 +222,7 @@
             <div class="portfolio_section_head">
                 <div class="portfolio_title_design">
                     <div class="violet_line"></div>
-                    <h2 class="section_title">
+                    <h2>
                         Portfolio
                     </h2>
                 </div>
@@ -317,18 +324,19 @@
             </div>
 
             <div class="references">
-                
+
                 <div class="references_text_picture">
                     <img src="img/“.png" alt=" Anführungszeichen" class="references_design_element">
                     <div class="reference_text">
-                        <p id="referenceQuote" class="reference_quote">Michael really kept the team together with his great organization and
+                        <p id="referenceQuote" class="reference_quote">Michael really kept the team together with his
+                            great organization and
                             clear communication. We
                             wouldn't have got this far without his commitment.</p>
                         <div class="reference_name">
-                        <div class=blue_line></div>
-                        <span id="referenceName">
-                            V.Schuster -Team Partner
-                        </span>
+                            <div class=blue_line></div>
+                            <span id="referenceName">
+                                V.Schuster -Team Partner
+                            </span>
                         </div>
                     </div>
                     <div class="reference_picture">
@@ -338,14 +346,14 @@
                 </div>
                 <div class="arrow_switch">
                     <button class="arrow_btn">
-                    <img src="img/arrow_back.png" alt="arrow_back" class="arrow_references">
+                        <img src="img/arrow_back.png" alt="arrow_back" class="arrow_references">
                     </button>
                     <span class="dotblue"></span>
                     <span class="dotgreen"></span>
                     <span class="dotgreen"></span>
                     <button class="arrow_btn">
-                    <img src="img/arrow_forward.png" alt="arrow_forward" class="arrow_references">
-                    </button>  
+                        <img src="img/arrow_forward.png" alt="arrow_forward" class="arrow_references">
+                    </button>
                 </div>
 
             </div>
@@ -359,14 +367,24 @@
     <section id="contact" class="contact_section">
         <img src="img/purple shadow contact.png" alt="purple_shadow" class="purple_shadow_contact">
         <div class="contact_wrapper">
-            
-            <div class="section_title">
-            <h2>
-                Contact
-            </h2>
-            <div class="green_line_contact"></div>
+
+            <div class="contact_section_title">
+                <h2>
+                    Contact
+                </h2>
+                <div class="green_line_contact"></div>
             </div>
             <div class="contact_content">
+
+                <div class="contact_description">
+                    <div class="contact_problem_to_solve">
+                        <div class="blue_line_contact"></div>
+                        <h3>Got a problem to solve?</h3>
+                    </div>
+                    <p>Encourage people to contact you and describe what role you are interested in. Show that you will
+                        add value to their projects through your work.</p>
+                    <p>Need a Frontend developer? Contact me!</p>
+                </div>
 
 
                 <form class="contact_form">
@@ -374,14 +392,16 @@
                     <input type="email" name="email" placeholder="Your E-Mail" class="form_input">
                     <textarea name="message" placeholder="Your message" class="form_textarea"></textarea>
                     <label class="checkbox_label">
-                    <input type="checkbox" class="input_checkbox"> <p> I`ve read the <span>private policy</span> and agree to the processing of my data as outlined. </p></input>
+                        <input type="checkbox" class="input_checkbox">
+                        <p> I`ve read the <span>private policy</span> and agree to the processing of my data as
+                            outlined. </p></input>
                     </label>
                     <button type="submit" class="submit_btn">
                         Send message
                     </button>
 
                 </form>
-
+                <img src="icons/go_up_button.png" alt="Go up Button" class="up_btn">
             </div>
 
         </div>
@@ -390,8 +410,29 @@
     <!-- =========================
          FOOTER
     ========================== -->
-    <footer class="footer">
-        <p>&copy; 2026 Johanna</p>
+    <footer class="portfolio_footer">
+        <div class="footer_wrapper">
+            <div>
+                <a href="#hero" class="nav_hero"><img src="icons/Johannalogo_version3.png" alt="Johanna Flock"
+                        class="nav_hero_img"></a>
+            </div>
+            <p>&copy; Johanna 2026 </p>
+            <div class="footer_links">
+                <a href="https://github.com/Johanna-Flock" target="_blank">
+                    <img src="icons/github button.png" alt="GitHub" class="social_media_icon">
+                </a>
+
+                <a href="mailto:johanna.j.f@web.de">
+                    <img src="icons/email button.png" alt="Email" class="social_media_icon">
+                </a>
+
+                <a href="https://www.linkedin.com/in/dein-profil/" target="_blank">
+                    <img src="icons/linkedin button.png" alt="LinkedIn" class="social_media_icon">
+                </a>
+            </div>
+
+        </div>
+
     </footer>
 
 </body>

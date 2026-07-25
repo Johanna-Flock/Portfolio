@@ -52,6 +52,7 @@
 .skills_headline {
     display: flex; 
     align-items: center;
+    margin-bottom:50px; 
     gap:20px; 
 }
 
@@ -62,6 +63,7 @@
 
 .skills_container p {
     margin-bottom: 40px; 
+    margin-top:0; 
 }
 
 .skill_btn {

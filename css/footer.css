@@ -1,0 +1,21 @@
+.portfolio_footer {
+    height: 291px; 
+    border-top: 4px solid #70E61C;
+    display:flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.footer_wrapper {
+    width: 100%;
+    max-width: 1440px; 
+    margin: 0 auto;
+    display:flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.footer_links {
+    display:flex; 
+    gap: 42px; 
+}
