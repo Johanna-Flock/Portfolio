@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
 
+
 </head>
 
 <body>
@@ -39,8 +40,8 @@
                     </div>
 
                     <div class="language_switch">
-                        <button class="language_btn active">DE</button>
-                        <button class="language_btn">EN</button>
+                        <button class="language_btn active_language_button" data-language="de">DE</button>
+                        <button class="language_btn" data-language="en">EN</button>
                     </div>
 
                 </div>
@@ -49,7 +50,8 @@
     </header>
     <section id="hero" class="hero_section">
         <div class="hero_wrapper">
-            <img src="img/Purple shadow.png" alt="purple-shadow" class="shadow_img">
+            <img src="img/purple shadow_hero.png" alt="purple-shadow" class="shadow_img_purple">
+            <img src="img/blue shadow_hero.png" alt="blue-shadow" class="shadow_img_blue">
             <div class="hero_container">
                 <div class="hero_content">
                     <div class="Iam">
@@ -68,7 +70,6 @@
                 </div>
                 <button class="hero_btn">Let`s talk</button>
             </div>
-            <img src="img/blue shadow.png" alt="blue-shadow" class="shadow_img">
         </div>
 
 
@@ -96,39 +97,80 @@
     <!-- =========================
          ABOUT ME
     ========================== -->
+
     <section id="about" class="about_section">
         <div class="about_wrapper">
+
             <div class="about_content">
-                <h2 class="section_title">
+
+                <h2 class="section_title" data-i18n="aboutTitle">
                     About Me
                 </h2>
+
+
                 <div>
-                    <p>
+                    <p data-i18n="aboutText">
                         Hey there, I'm Johanna! I'm a passionate frontend developer who loves creating beautiful and
                         functional websites. My journey in coding started when I realized the power of turning ideas
                         into reality through code. I'm constantly inspired by the ever-evolving world of web
                         technologies and the creative solutions developers come up with.
                     </p>
                 </div>
+
+
                 <div>
+
                     <ul>
-                        <li> <img src="icons/location.png" alt="Location"> Iam located in Augsburg, Bavaria. I
-                            definitely used to work remotely. </li>
-                        <li> <img src="icons/bulb desktop.png" alt="Bulb"> I love solving problems and creating
-                            innovative solutions that are well designed for users, accesible and meet their needs
-                            exactly.</li>
-                        <li> <img src="icons/puzzle desktop.png" alt="JavaScript">My big passion is to create
-                            user-friendly and accessible websites. Therefore I appreciate to be in contact with the
-                            users and develop solutions that meet their expectations.</li>
+
+                        <li>
+                            <img src="icons/location.png" alt="Location">
+
+                            <span data-i18n="locationText">
+                                I am located in Augsburg, Bavaria. I am happy to work remotely.
+                            </span>
+                        </li>
+
+
+                        <li>
+                            <img src="icons/bulb desktop.png" alt="Bulb">
+
+                            <span data-i18n="problemSolvingText">
+                                I love solving problems and creating innovative solutions that are well designed for
+                                users, accessible and meet their needs exactly.
+                            </span>
+                        </li>
+
+
+                        <li>
+                            <img src="icons/puzzle desktop.png" alt="JavaScript">
+
+                            <span data-i18n="passionText">
+                                My big passion is to create user-friendly and accessible websites. Therefore I
+                                appreciate
+                                being in contact with users and develop solutions that meet their expectations.
+                            </span>
+                        </li>
+
                     </ul>
+
                 </div>
+
             </div>
+
+
             <div class="picture">
+
                 <img src="img/aboutme_shadow.png" alt="green-purple-shadow" class="shadow_img_aboutme">
+
                 <img src="img/johanna_aboutme2.png" alt="Johanna Flock" class="aboutme_img">
+
             </div>
+
         </div>
+
+
         <img src="img/background_aboutme.png" alt="" class="about_wave">
+
     </section>
 
     <!-- =========================
@@ -240,8 +282,9 @@
 
                         <div class="project_overlay">
                             <div class="project_buttons">
-                                <a href="#" class="project_btn blueborder">GitHub</a>
-                                <a href="#" class="project_btn violetbutton">Live Test</a>
+                                <a href="#" class="project_btn blueborder" target="_blank"
+                                    rel="noopener noreferrer">GitHub</a>
+                                <a href="#" class="project_btn violetbutton" target="_blank" rel="noopener noreferrer">Live Test</a>
                             </div>
                             <div class="project_description">
                                 <h4>El Pollo Loco</h4>
@@ -261,8 +304,8 @@
 
                         <div class="project_overlay">
                             <div class="project_buttons">
-                                <a href="#" class="project_btn blueborder">GitHub</a>
-                                <a href="#" class="project_btn violetbutton">Live Test</a>
+                                <a href="#" class="project_btn blueborder" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <a href="#" class="project_btn violetbutton" target="_blank" rel="noopener noreferrer">Live Test</a>
                             </div>
                             <div class="project_description">
                                 <h4>Pokédex</h4>
@@ -284,8 +327,8 @@
 
                         <div class="project_overlay">
                             <div class="project_buttons">
-                                <a href="#" class="project_btn blueborder">GitHub</a>
-                                <a href="#" class="project_btn violetbutton">Live Test</a>
+                                <a href="#" class="project_btn blueborder" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <a href="#" class="project_btn violetbutton" target="_blank" rel="noopener noreferrer">Live Test</a>
                             </div>
                             <div class="project_description">
                                 <h4>Join</h4>
@@ -305,8 +348,8 @@
 
                         <div class="project_overlay">
                             <div class="project_buttons">
-                                <a href="#" class="project_btn blueborder">GitHub</a>
-                                <a href="#" class="project_btn violetbutton">Live Test</a>
+                                <a href="#" class="project_btn blueborder" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <a href="#" class="project_btn violetbutton" target="_blank" rel="noopener noreferrer">Live Test</a>
                             </div>
                             <div class="project_description">
                                 <h4>DABubble</h4>
@@ -388,13 +431,15 @@
 
 
                 <form class="contact_form">
-                    <input type="text" name="name" placeholder="Your Name" class="form_input">
-                    <input type="email" name="email" placeholder="Your E-Mail" class="form_input">
+                    <input type="text" name="name" placeholder="Your Name" class="form_input"
+                        data-i18n="namePlaceholder">
+                    <input type="email" name="email" placeholder="Your E-Mail" class="form_input"
+                        data-i18n="emailPlaceholder">
                     <textarea name="message" placeholder="Your message" class="form_textarea"></textarea>
                     <label class="checkbox_label">
                         <input type="checkbox" class="input_checkbox">
-                        <p> I`ve read the <span>private policy</span> and agree to the processing of my data as
-                            outlined. </p></input>
+                        <p> I`ve read the <span>privacy policy</span> and agree to the processing of my data as
+                            outlined. </p>
                     </label>
                     <button type="submit" class="submit_btn">
                         Send message
@@ -415,9 +460,13 @@
             <div class="footer_links">
                 <a href="#hero" class="nav_hero"><img src="icons/Johannalogo_version3.png" alt="Johanna Flock"
                         class="nav_hero_img"></a>
-                <a href="legal_notice.html"><p>Legal Notice</p></a>
-                <a href="privacy_policy.html"><p>Privacy Policy</p></a>
-                
+                <a href="legal_notice.html">
+                    <p>Legal Notice</p>
+                </a>
+                <a href="privacy_policy.html">
+                    <p>Privacy Policy</p>
+                </a>
+
             </div>
             <p>&copy; Johanna 2026</p>
             <div class="footer_social_media">
@@ -437,7 +486,7 @@
         </div>
 
     </footer>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
