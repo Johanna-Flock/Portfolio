@@ -1,31 +1,37 @@
 .hero_section {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 100px;
     height:100vh; 
 }
 
 .hero_wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: relative;
     width: 100%;
 }
 
-.shadow_img { 
+.shadow_img_purple {
+    position: absolute;
+    top: -60%;
+    left: 0;
+    height: auto;
+    width: 679px;
+}
+
+.shadow_img_blue{
+    position: absolute;
+    top: -90%;
+    right: 0;
     height: auto;
     width: 679px;
 }
 
 .hero_container  {
-    /* margin-top: 300px;  */
-    /* height: 610px;  */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 1;
     display: flex;
     flex-direction: column;
