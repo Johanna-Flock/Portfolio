@@ -92,6 +92,10 @@
     opacity: 1;
 }
 
+.error {
+    border:2px solid red;
+}
+
 .checkbox_label {
     display: flex;
     align-items: center; /* oder flex-start */

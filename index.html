@@ -68,7 +68,7 @@
                         </span>
                     </div>
                 </div>
-                <button class="hero_btn">Let`s talk</button>
+                <a href="#contact" class="hero_btn">Let`s talk</a>
             </div>
         </div>
 
@@ -284,7 +284,8 @@
                             <div class="project_buttons">
                                 <a href="#" class="project_btn blueborder" target="_blank"
                                     rel="noopener noreferrer">GitHub</a>
-                                <a href="#" class="project_btn violetbutton" target="_blank" rel="noopener noreferrer">Live Test</a>
+                                <a href="#" class="project_btn violetbutton" target="_blank"
+                                    rel="noopener noreferrer">Live Test</a>
                             </div>
                             <div class="project_description">
                                 <h4>El Pollo Loco</h4>
@@ -304,8 +305,10 @@
 
                         <div class="project_overlay">
                             <div class="project_buttons">
-                                <a href="#" class="project_btn blueborder" target="_blank" rel="noopener noreferrer">GitHub</a>
-                                <a href="#" class="project_btn violetbutton" target="_blank" rel="noopener noreferrer">Live Test</a>
+                                <a href="#" class="project_btn blueborder" target="_blank"
+                                    rel="noopener noreferrer">GitHub</a>
+                                <a href="#" class="project_btn violetbutton" target="_blank"
+                                    rel="noopener noreferrer">Live Test</a>
                             </div>
                             <div class="project_description">
                                 <h4>Pokédex</h4>
@@ -327,8 +330,10 @@
 
                         <div class="project_overlay">
                             <div class="project_buttons">
-                                <a href="#" class="project_btn blueborder" target="_blank" rel="noopener noreferrer">GitHub</a>
-                                <a href="#" class="project_btn violetbutton" target="_blank" rel="noopener noreferrer">Live Test</a>
+                                <a href="#" class="project_btn blueborder" target="_blank"
+                                    rel="noopener noreferrer">GitHub</a>
+                                <a href="#" class="project_btn violetbutton" target="_blank"
+                                    rel="noopener noreferrer">Live Test</a>
                             </div>
                             <div class="project_description">
                                 <h4>Join</h4>
@@ -348,8 +353,10 @@
 
                         <div class="project_overlay">
                             <div class="project_buttons">
-                                <a href="#" class="project_btn blueborder" target="_blank" rel="noopener noreferrer">GitHub</a>
-                                <a href="#" class="project_btn violetbutton" target="_blank" rel="noopener noreferrer">Live Test</a>
+                                <a href="#" class="project_btn blueborder" target="_blank"
+                                    rel="noopener noreferrer">GitHub</a>
+                                <a href="#" class="project_btn violetbutton" target="_blank"
+                                    rel="noopener noreferrer">Live Test</a>
                             </div>
                             <div class="project_description">
                                 <h4>DABubble</h4>
@@ -383,7 +390,7 @@
                         </div>
                     </div>
                     <div class="reference_picture">
-                        <img src="img/schuster.png" alt="Referenceperson" id="referenceImage" class="reference_img">
+                        <img src="img/place holder 3.png" alt="Referenceperson" id="referenceImage" class="reference_img">
                     </div>
                     <div class="green_line"></div>
                 </div>
@@ -437,16 +444,17 @@
                         data-i18n="emailPlaceholder">
                     <textarea name="message" placeholder="Your message" class="form_textarea"></textarea>
                     <label class="checkbox_label">
-                        <input type="checkbox" class="input_checkbox">
+                        <input type="checkbox" name="privacy" class="input_checkbox" required>
                         <p> I`ve read the <span>privacy policy</span> and agree to the processing of my data as
                             outlined. </p>
                     </label>
-                    <button type="submit" class="submit_btn">
+                    <button type="button" class="submit_btn" onclick="sendMail()">
                         Send message
                     </button>
-
                 </form>
+                <a href="#hero">
                 <img src="icons/go_up_button.png" alt="Go up Button" class="up_btn">
+                </a>
             </div>
 
         </div>
@@ -458,15 +466,17 @@
     <footer class="portfolio_footer">
         <div class="footer_wrapper">
             <div class="footer_links">
-                <a href="#hero" class="nav_hero"><img src="icons/Johannalogo_version3.png" alt="Johanna Flock"
-                        class="nav_hero_img"></a>
-                <a href="legal_notice.html">
-                    <p>Legal Notice</p>
-                </a>
-                <a href="privacy_policy.html">
-                    <p>Privacy Policy</p>
+                <a href="#hero" class="nav_hero">
+                    <img src="icons/Johannalogo_version3.png" alt="Johanna Flock" class="nav_hero_img">
                 </a>
 
+                <a href="legal_notice.html" class="footer_link">
+                    Legal Notice
+                </a>
+
+                <a href="privacy_policy.html" class="footer_link">
+                    Privacy Policy
+                </a>
             </div>
             <p>&copy; Johanna 2026</p>
             <div class="footer_social_media">
