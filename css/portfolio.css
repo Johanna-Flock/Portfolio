@@ -294,3 +294,12 @@
     background-color: #70E61C;
     border-radius: 50%;
 }
+
+.dotpurple {
+    background-color: #9747FF;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #9747FF;
+    border-radius: 50%;
+}

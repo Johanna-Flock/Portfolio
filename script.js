@@ -21,6 +21,69 @@ const observer = new IntersectionObserver((entries) => {
 });
 sections.forEach(section => observer.observe(section));
 
+
+//für die Referenzen-Slider
+
+const references = [
+    {
+        quote: "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+        name: "V. Schuster - Team Partner",
+        image: "img/place holder 3.png"
+    },
+    {
+        quote: "Johanna is very reliable and always brings creative ideas to the team. Her communication and problem-solving skills are a real asset.",
+        name: "S. Müller - Team Partner",
+        image: "img/place holder 2.png"
+    },
+    {
+        quote: "Working with Johanna was a great experience. She approaches challenges with enthusiasm and always finds a good solution.",
+        name: "L. Weber - Team Partner",
+        image: "img/place holder 1.png"
+    }
+];
+
+let currentReference = 0;
+
+const referenceQuote = document.getElementById("referenceQuote");
+const referenceName = document.getElementById("referenceName");
+const referenceImage = document.getElementById("referenceImage");
+const referenceDots = document.querySelectorAll(".dotblue, .dotgreen");
+
+function showReference(index) {
+    const reference = references[index];
+    referenceQuote.textContent = reference.quote;
+    referenceName.textContent = reference.name;
+    referenceImage.src = reference.image;
+    referenceDots.forEach((dot, dotIndex) => {
+        dot.classList.remove("dotblue", "dotgreen", "dotpurple");
+        if (dotIndex < index) {
+            dot.classList.add("dotpurple");
+        } else if (dotIndex === index) {
+            dot.classList.add("dotblue");
+        } else {
+            dot.classList.add("dotgreen");
+        }
+    });
+}
+
+document.getElementById("referenceNext").addEventListener("click", function () {
+    currentReference++;
+    if (currentReference >= references.length) {
+        currentReference = 0;
+    }
+    showReference(currentReference);
+});
+
+
+document.getElementById("referencePrev").addEventListener("click", function () {
+    currentReference--;
+    if (currentReference < 0) {
+        currentReference = references.length - 1;
+    }
+    showReference(currentReference);
+});
+
+
 //
 // Übersetzungen
 //

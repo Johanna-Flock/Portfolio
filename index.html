@@ -390,19 +390,20 @@
                         </div>
                     </div>
                     <div class="reference_picture">
-                        <img src="img/place holder 3.png" alt="Referenceperson" id="referenceImage" class="reference_img">
+                        <img src="img/place holder 3.png" alt="Referenceperson" id="referenceImage"
+                            class="reference_img">
                     </div>
                     <div class="green_line"></div>
                 </div>
                 <div class="arrow_switch">
-                    <button class="arrow_btn">
-                        <img src="img/arrow_back.png" alt="arrow_back" class="arrow_references">
+                    <button class="arrow_btn" id="referencePrev">
+                        <img src="img/arrow_back.png" alt="Previous reference" class="arrow_references">
                     </button>
                     <span class="dotblue"></span>
                     <span class="dotgreen"></span>
                     <span class="dotgreen"></span>
-                    <button class="arrow_btn">
-                        <img src="img/arrow_forward.png" alt="arrow_forward" class="arrow_references">
+                    <button class="arrow_btn" id="referenceNext">
+                        <img src="img/arrow_forward.png" alt="Next reference" class="arrow_references">
                     </button>
                 </div>
 
@@ -438,22 +439,61 @@
 
 
                 <form class="contact_form">
-                    <input type="text" name="name" placeholder="Your Name" class="form_input"
-                        data-i18n="namePlaceholder">
-                    <input type="email" name="email" placeholder="Your E-Mail" class="form_input"
-                        data-i18n="emailPlaceholder">
-                    <textarea name="message" placeholder="Your message" class="form_textarea"></textarea>
-                    <label class="checkbox_label">
-                        <input type="checkbox" name="privacy" class="input_checkbox" required>
-                        <p> I`ve read the <span>privacy policy</span> and agree to the processing of my data as
-                            outlined. </p>
-                    </label>
+                    <div class="form_field">
+                        <input id="name" type="text" name="name" placeholder="Your Name" class="form_input"
+                            data-i18n="namePlaceholder">
+
+                        <img src="icons/redframe.png" alt="" class="validation_icon error_icon">
+
+                        <img src="icons/greenframe.png" alt="" class="validation_icon success_icon">
+                        <p class="required_message">Your name is required.</p>
+                        <p class="invalid_message">Your name needs at least 2 characters.</p>
+                    </div>
+                    <div class="form_field">
+                        <input id="email" type="email" name="email" placeholder="Your E-Mail" class="form_input"
+                            data-i18n="emailPlaceholder">
+
+                        <img src="icons/redframe.png" alt="" class="validation_icon error_icon">
+
+                        <img src="icons/greenframe.png" alt="" class="validation_icon success_icon">
+                        <p class="required_message">Your email is required.</p>
+                        <p class="invalid_message">Please enter a valid email address.</p>
+                    </div>
+                    <div class="form_field">
+                        <textarea id="message" name="message" placeholder="Your message"
+                            class="form_textarea"></textarea>
+
+                        <img src="icons/redframe.png" alt="" class="validation_icon error_icon">
+                        <img src="icons/greenframe.png" alt="" class="validation_icon success_icon">
+                        <p class="required_message">Your message is required.</p>
+                        <p class="invalid_message">Your message needs at least 10 characters.</p>
+                    </div>
+                    <div class="checkbox_wrapper">
+                        <label class="checkbox_label">
+                            <input type="checkbox" name="privacy" class="input_checkbox" required>
+                            <span class="custom_checkbox"></span>
+
+                            <p>
+                                I've read the <span>privacy policy</span> and agree to the processing of my data as
+                                outlined.
+                            </p>
+                        </label>
+                        <p class="privacy_error">
+                            Please accept the privacy policy.
+                        </p>
+                    </div>
                     <button type="button" class="submit_btn" onclick="sendMail()">
                         Send message
                     </button>
                 </form>
-                <a href="#hero">
-                <img src="icons/go_up_button.png" alt="Go up Button" class="up_btn">
+                <a href="#hero" class="up_btn">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
+                        <path
+                            d="M18 15.828L13.343 20.485C12.9525 20.8755 12.3194 20.8755 11.929 20.485C11.5385 20.0945 11.5385 19.4615 11.929 19.071L18.2928 12.7071C18.6834 12.3166 19.3165 12.3166 19.7071 12.7071L26.071 19.071C26.4614 19.4615 26.4614 20.0945 26.071 20.485C25.6805 20.8755 25.0474 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5522 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z"
+                            fill="white" />
+                    </svg>
+
                 </a>
             </div>
 
@@ -497,6 +537,7 @@
 
     </footer>
     <script src="script.js"></script>
+    <script src="contact_form.js"></script>
 </body>
 
 </html>
