@@ -26,13 +26,22 @@
 
 .contact_section_title {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     gap: 50px;
     width: 100%;
-    position:relative; 
-    z-index: 10; 
-    margin-bottom:50px; 
+    position: relative;
+    z-index: 10;
+    margin-bottom: 50px;
+}
+
+.green_line_contact {
+    position: absolute;
+    left: 63%;
+    margin-left: 40px;
+    width: 100vw;
+    height: 3px;
+    background: #70E61C;
 }
 
 .contact_form {
@@ -253,6 +262,16 @@
     justify-content: flex-start; 
     align-items:center; 
     gap: 20px; 
+    position: relative;
+}
+
+.blue_line_contact {
+    position: absolute;
+    right: 100%;
+    margin-right: 40px;
+    width: 100vw;
+    height: 4px;
+    background-color: #1CDAE6;
 }
 
 .contact_description {

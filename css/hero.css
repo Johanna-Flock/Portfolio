@@ -119,18 +119,28 @@
     left:0;
     right:0;
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items:flex-end;
-    padding:0 24px;
+   gap:1000px; 
 }
 
 .social_media {
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap:42px; 
-    height:40px; 
-    width: 373px; 
+    gap: 42px;
+    height: 40px;
+    width: 373px;
+}
+
+.green_line {
+    position: absolute;
+    right: 100%;
+    width: 100vw;
+    height: 4px;
+    background-color: #70E61C;
+    margin-right: 40px;
 }
 
 .social_media_icon {
@@ -158,4 +168,8 @@
 .scroll_arrow {
     width: 30px;
     height: auto;
+}
+
+@media (min-width: 1440px) {
+
 }

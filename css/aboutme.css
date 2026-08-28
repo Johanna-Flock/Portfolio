@@ -19,7 +19,8 @@
 .about_wave {
     position: absolute;
     left: 0;
-    top: 760px;
+    /* top: 760px; */
+    top:70%; 
     width: 100%;
     height:auto; 
     /* max-height: 600px; */
@@ -48,8 +49,10 @@
 
 .shadow_img_aboutme {
     position: absolute;
-    top: -70px;      
-    left: -26px;   
+    /* top: -70px;      
+    left: -26px;    */
+    top:-10%; 
+    left: -5%;
     width: 120%;
     z-index: 1;
 }

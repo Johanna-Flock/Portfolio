@@ -50,10 +50,20 @@
 }
 
 .skills_headline {
+    position: relative;
     display: flex; 
     align-items: center;
     margin-bottom:50px; 
     gap:20px; 
+}
+
+.blue_line {
+    position: absolute;
+    left: 46%;
+    margin-left: 40px;
+    width: 100vw;
+    height: 4px;
+    background-color: #1CDAE6;
 }
 
 .skills_container span {

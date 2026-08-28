@@ -45,7 +45,16 @@
     align-items: center;
     margin-bottom: 50px; 
     gap: 30px; 
+    position: relative;
+}
 
+.violet_line {
+    position: absolute;
+    right: 100%;
+    width: 100vw;
+    height: 4px;
+    background-color: #9747FF;
+    margin-right: 40px;
 }
 
 .portfolio_section_head p {
@@ -225,10 +234,17 @@
 
 .reference_name {
     display:flex; 
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px; 
     margin-top: 30px; 
+}
+
+.blue_line_references {
+    width: 503px; 
+    height: 4px;
+    background-color: #1CDAE6;
+    margin-right: 10px;
 }
 
 .reference_picture {

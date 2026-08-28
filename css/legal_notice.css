@@ -6,9 +6,28 @@
 
 .legal_notice_head {
     display: flex; 
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     gap:20px; 
+    position: relative;
+}
+
+.violet_line_legal_notice {
+    position: absolute;
+    width: 100vw;
+    height: 4px;
+    background-color: #9747FF;
+    right: 63%;
+    margin-right: 40px;
+}
+
+.violet_line_legal_notice2 {
+     position: absolute;
+    width: 100vw;
+    height: 4px;
+    background-color: #9747FF;
+    left: 63%;
+    margin-left: 40px;
 }
 
 .legal_notice_content ul {
