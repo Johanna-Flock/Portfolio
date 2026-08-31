@@ -39,10 +39,13 @@
     position: absolute;
     left: 63%;
     margin-left: 40px;
-    width: 100vw;
-    height: 3px;
+    height: 4px;
     background: #70E61C;
+    z-index: 100; 
 }
+
+
+
 
 .contact_form {
     display: flex;
@@ -269,7 +272,6 @@
     position: absolute;
     right: 100%;
     margin-right: 40px;
-    width: 100vw;
     height: 4px;
     background-color: #1CDAE6;
 }

@@ -14,7 +14,6 @@
 
 .violet_line_legal_notice {
     position: absolute;
-    width: 100vw;
     height: 4px;
     background-color: #9747FF;
     right: 63%;
@@ -22,8 +21,7 @@
 }
 
 .violet_line_legal_notice2 {
-     position: absolute;
-    width: 100vw;
+    position: absolute;
     height: 4px;
     background-color: #9747FF;
     left: 63%;

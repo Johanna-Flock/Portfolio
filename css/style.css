@@ -19,6 +19,15 @@
     font-style: normal;
 } 
 
+/* html,
+body {
+    overflow-x: hidden;
+} */
+
+/* * {
+    outline: 1px solid red;
+} */
+
 
 h1 {
    font-family: Poppins;

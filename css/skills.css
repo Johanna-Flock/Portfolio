@@ -57,12 +57,21 @@
     gap:20px; 
 }
 
-.blue_line {
+/* .blue_line {
     position: absolute;
     left: 46%;
     margin-left: 40px;
     width: 100vw;
     height: 4px;
+    background-color: #1CDAE6;
+} */
+
+.blue_line {
+    position: absolute;
+    left: 46%;
+    margin-left: 40px;
+    height: 4px;
+    width: 0;
     background-color: #1CDAE6;
 }
 

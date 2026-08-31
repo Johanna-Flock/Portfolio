@@ -205,3 +205,82 @@ languageButtons.forEach(button => {
     }
 
 });
+
+
+///Lines
+const screenPadding = 24;
+const lineGap = 40;
+
+function updateLineWidth(lineSelector, direction, positionPercent) {
+    const line = document.querySelector(lineSelector);
+
+    if (!line) return;
+
+    const parent = line.parentElement;
+    const parentRect = parent.getBoundingClientRect();
+
+    let lineStart;
+
+    if (direction === 'left') {
+        if (positionPercent === 100) {
+            lineStart = parentRect.left - lineGap;
+        } else {
+            lineStart =
+                parentRect.left +
+                (parentRect.width * positionPercent / 100) -
+                lineGap;
+        }
+
+        const width = Math.max(
+            0,
+            lineStart - screenPadding
+        );
+
+        line.style.width = `${width}px`;
+    }
+
+    if (direction === 'right') {
+        if (positionPercent === 100) {
+            lineStart = parentRect.right + lineGap;
+        } else {
+            lineStart =
+                parentRect.left +
+                (parentRect.width * positionPercent / 100) +
+                lineGap;
+        }
+
+        const width = Math.max(
+            0,
+            window.innerWidth - lineStart - screenPadding
+        );
+
+        line.style.width = `${width}px`;
+    }
+}
+
+
+function updateAllLines() {
+
+    // Hero
+    updateLineWidth('.green_line', 'left', 100);
+
+    // Skills
+    updateLineWidth('.blue_line', 'right', 46);
+
+    // Portfolio
+    updateLineWidth('.violet_line', 'left', 100);
+
+    // Contact
+    updateLineWidth('.green_line_contact', 'right', 63);
+    updateLineWidth('.blue_line_contact', 'left', 100);
+
+    // Legal Notice
+    updateLineWidth('.violet_line_legal_notice', 'left', 63);
+    updateLineWidth('.violet_line_legal_notice2', 'right', 63);
+}
+
+
+window.addEventListener('resize', updateAllLines);
+window.addEventListener('load', updateAllLines);
+
+updateAllLines();
