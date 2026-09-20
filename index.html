@@ -33,9 +33,9 @@
                 <div class="navbar_menu">
 
                     <div class="nav_links ">
-                        <a href="#about" class="nav_btn subtitles">About</a>
-                        <a href="#portfolio" class="nav_btn subtitles">Portfolio</a>
-                        <a href="#contact" class="nav_btn subtitles">Contact</a>
+                        <a href="#about" class="nav_btn subtitles" data-i18n="aboutTitle">About me</a>
+                        <a href="#portfolio" class="nav_btn subtitles" data-i18n="portfolioTitle">Portfolio</a>
+                        <a href="#contact" class="nav_btn subtitles" data-i18n="contactTitle">Contact</a>
                     </div>
 
                     <div class="language_switch">
@@ -109,10 +109,10 @@
 
                 <div>
                     <p data-i18n="aboutText">
-                        Hey there, I'm Johanna! I'm a passionate frontend developer who loves creating beautiful and
-                        functional websites. My journey in coding started when I realized the power of turning ideas
-                        into reality through code. I'm constantly inspired by the ever-evolving world of web
-                        technologies and the creative solutions developers come up with.
+                        Hello, I’m Johanna, and I love developing applications that are simple, clear, and functional.
+                        In technical support, I work with customers daily, understand their needs, and look for the
+                        best possible solution to meet their requirements. My goal is to create software that genuinely
+                        helps people.
                     </p>
                 </div>
 
@@ -122,20 +122,10 @@
                     <ul>
 
                         <li>
-                            <img src="icons/location.png" alt="Location">
-
-                            <span data-i18n="locationText">
-                                I am located in Augsburg, Bavaria. I am happy to work remotely.
-                            </span>
-                        </li>
-
-
-                        <li>
                             <img src="icons/bulb desktop.png" alt="Bulb">
 
                             <span data-i18n="problemSolvingText">
-                                I love solving problems and creating innovative solutions that are well designed for
-                                users, accessible and meet their needs exactly.
+                                I get into a real flow when I can develop tailored features for customers. Through feedback and collaboration, I find out which needs and challenges a product should address. For me, good software starts with understanding the people who use it.
                             </span>
                         </li>
 
@@ -144,11 +134,19 @@
                             <img src="icons/puzzle desktop.png" alt="JavaScript">
 
                             <span data-i18n="passionText">
-                                My big passion is to create user-friendly and accessible websites. Therefore I
-                                appreciate
-                                being in contact with users and develop solutions that meet their expectations.
+                                As part of a team, I enjoy thinking about how new features or products can be meaningfully integrated into an existing architecture. I find it especially exciting when this results in an elegant solution that is simple and intuitive to use.
+
                             </span>
                         </li>
+
+                        <li>
+                            <img src="icons/location.png" alt="Location">
+
+                            <span data-i18n="locationText">
+                                I live in Augsburg, Bavaria, and I prefer working in a hybrid setup.
+                            </span>
+                        </li>
+
 
                     </ul>
 
@@ -161,7 +159,7 @@
 
                 <img src="img/aboutme_shadow.png" alt="green-purple-shadow" class="shadow_img_aboutme">
 
-                <img src="img/johanna_aboutme2.png" alt="Johanna Flock" class="aboutme_img">
+                <img src="img/Johanna_about_me_version3.png" alt="Johanna Flock" class="aboutme_img">
 
             </div>
 
@@ -229,23 +227,23 @@
             <div class="skills_container">
                 <div class="skills_headline">
 
-                    <h2 class="section_title">
+                    <h2 data-i18n="skillsHeadline" class="section_title">
                         Skills
                     </h2>
                     <div class="blue_line"></div>
                 </div>
 
-                <p>
-                    Hey there, I'm Johanna! I'm a passionate frontend developer who loves creating beautiful and
-                    functional websites. My journey in coding started when I realized the power of turning ideas into
-                    reality through code. I'm constantly inspired by the ever-evolving world of web technologies and the
-                    creative solutions developers come up with.
+                <p data-i18n="skillsText">
+                    Through my work in technical support, I eventually wanted to do more than just solve problems – I wanted to understand, develop, and create solutions myself. That’s how I got into web development and programming. Through my own projects, I continuously learn and develop my skills further.
                 </p>
-                <h3>Looking for <span>another skill</span> ?</h3>
-                <p>
-                    Curious about learning new technologies and frameworks.
+                <h3>
+                    <span data-i18n="skillsOfferStart">Looking for</span>
+                    <span class="highlight" data-i18n="skillsNews">something new</span>?
+                </h3>
+                <p data-i18n="skillsCurious" class="skills_curious">
+                    Do you have an exciting technology or project in mind?
                 </p>
-                <button class="skill_btn">Get in touch</button>
+                <a href="#contact" class="skill_btn">Get in touch</a>
             </div>
 
         </div>
@@ -267,7 +265,7 @@
                         Portfolio
                     </h2>
                 </div>
-                <p>
+                <p data-i18n="portfolioText">
                     Explore a selection of my work here -Interact with projects to see my skills in action.
                 </p>
             </div>
@@ -288,7 +286,7 @@
                             </div>
                             <div class="project_description">
                                 <h4>El Pollo Loco</h4>
-                                <p>
+                                <p data-i18n="portfolioPolloLoco">
                                     Jump, run and throw game based on object-oriented approach. Help Pepe to find coins
                                     and tabasco salsa to fight against the crazy chicken.
                                 </p>
@@ -311,7 +309,7 @@
                             </div>
                             <div class="project_description">
                                 <h4>Pokédex</h4>
-                                <p>
+                                <p data-i18n="portfolioPokedex">
                                     Based on the PokéAPI a simple library that provides and catalogues pokemon
                                     information.
                                 </p>
@@ -336,7 +334,7 @@
                             </div>
                             <div class="project_description">
                                 <h4>Join</h4>
-                                <p>
+                                <p data-i18n="portfolioJoin">
                                     Task manager inspired by the Kanban System. Create and organize tasks using drag and
                                     drop functions, assign users and categories.
                                 </p>
@@ -359,7 +357,7 @@
                             </div>
                             <div class="project_description">
                                 <h4>DABubble</h4>
-                                <p>
+                                <p data-i18n="portfolioDABubble">
                                     This App is a Slack Clone App. It revolutionizes team communication and
                                     collaboration with its intuitive interface, real-time messaging, and robust channel
                                     organization.
@@ -377,10 +375,10 @@
                 <div class="references_text_picture">
                     <img src="img/“.png" alt=" Anführungszeichen" class="references_design_element">
                     <div class="reference_text">
-                        <p id="referenceQuote" class="reference_quote">Michael really kept the team together with his
+                        <p id="referenceQuote" class="reference_quote">Johanna really kept the team together with her
                             great organization and
                             clear communication. We
-                            wouldn't have got this far without his commitment.</p>
+                            wouldn't have got this far without her commitment.</p>
                         <div class="reference_name">
                             <div class=blue_line_references></div>
                             <span id="referenceName">
@@ -398,9 +396,9 @@
                     <button class="arrow_btn" id="referencePrev">
                         <img src="img/arrow_back.png" alt="Previous reference" class="arrow_references">
                     </button>
-                    <span class="dotblue"></span>
-                    <span class="dotgreen"></span>
-                    <span class="dotgreen"></span>
+                    <span class="reference-dot dotblue"></span>
+                    <span class="reference-dot dotgreen"></span>
+                    <span class="reference-dot dotgreen"></span>
                     <button class="arrow_btn" id="referenceNext">
                         <img src="img/arrow_forward.png" alt="Next reference" class="arrow_references">
                     </button>
@@ -419,7 +417,7 @@
         <div class="contact_wrapper">
 
             <div class="contact_section_title">
-                <h2>
+                <h2 data-i18n="contactTitle">
                     Contact
                 </h2>
                 <div class="green_line_contact"></div>
@@ -429,11 +427,10 @@
                 <div class="contact_description">
                     <div class="contact_problem_to_solve">
                         <div class="blue_line_contact"></div>
-                        <h3>Got a problem to solve?</h3>
+                        <h3 data-i18n="contactQuestion">Let’s build something together</h3>
                     </div>
-                    <p>Encourage people to contact you and describe what role you are interested in. Show that you will
-                        add value to their projects through your work.</p>
-                    <p>Need a Frontend developer? <strong>Contact me!</strong></p>
+                    <p data-i18n="contactText">I’m looking forward to new challenges in frontend and product development – especially at the intersection of technology, users, and product.</p>
+                    <p data-i18n="contactOffer">Do you have a project or position where I could contribute? I’d love to hear from you.</p>
                 </div>
 
 
@@ -443,45 +440,80 @@
                             data-i18n="namePlaceholder">
 
                         <img src="icons/redframe.png" alt="" class="validation_icon error_icon">
-
                         <img src="icons/greenframe.png" alt="" class="validation_icon success_icon">
-                        <p class="required_message">Your name is required.</p>
-                        <p class="invalid_message">Your name needs at least 2 characters.</p>
+
+                        <p class="required_message" data-i18n="nameRequired">
+                            Your name is required.
+                        </p>
+
+                        <p class="invalid_message" data-i18n="nameInvalid">
+                            Your name needs at least 2 characters.
+                        </p>
                     </div>
+
+
                     <div class="form_field">
                         <input id="email" type="email" name="email" placeholder="Your E-Mail" class="form_input"
                             data-i18n="emailPlaceholder">
 
                         <img src="icons/redframe.png" alt="" class="validation_icon error_icon">
-
                         <img src="icons/greenframe.png" alt="" class="validation_icon success_icon">
-                        <p class="required_message">Your email is required.</p>
-                        <p class="invalid_message">Please enter a valid email address.</p>
+
+                        <p class="required_message" data-i18n="emailRequired">
+                            Your email is required.
+                        </p>
+
+                        <p class="invalid_message" data-i18n="emailInvalid">
+                            Please enter a valid email address.
+                        </p>
                     </div>
+
+
                     <div class="form_field">
-                        <textarea id="message" name="message" placeholder="Your message"
-                            class="form_textarea"></textarea>
+                        <textarea id="message" name="message" placeholder="Your message" class="form_textarea"
+                            data-i18n="messagePlaceholder"></textarea>
 
                         <img src="icons/redframe.png" alt="" class="validation_icon error_icon">
                         <img src="icons/greenframe.png" alt="" class="validation_icon success_icon">
-                        <p class="required_message">Your message is required.</p>
-                        <p class="invalid_message">Your message needs at least 10 characters.</p>
+
+                        <p class="required_message" data-i18n="messageRequired">
+                            Your message is required.
+                        </p>
+
+                        <p class="invalid_message" data-i18n="messageInvalid">
+                            Your message needs at least 10 characters.
+                        </p>
                     </div>
+
+
                     <div class="checkbox_wrapper">
                         <label class="checkbox_label">
                             <input type="checkbox" name="privacy" class="input_checkbox" required>
+
                             <span class="custom_checkbox"></span>
 
                             <p>
-                                I've read the <span>privacy policy</span> and agree to the processing of my data as
-                                outlined.
+                                <span data-i18n="privacyTextStart">
+                                    I've read the
+                                </span>
+
+                                <span data-i18n="privacyPolicy">
+                                    privacy policy
+                                </span>
+
+                                <span data-i18n="privacyTextEnd">
+                                    and agree to the processing of my data as outlined.
+                                </span>
                             </p>
                         </label>
-                        <p class="privacy_error">
+
+                        <p class="privacy_error" data-i18n="privacyError">
                             Please accept the privacy policy.
                         </p>
                     </div>
-                    <button type="button" class="submit_btn" onclick="sendMail()">
+
+
+                    <button type="button" class="submit_btn" onclick="sendMail()" data-i18n="sendMessage">
                         Send message
                     </button>
                 </form>

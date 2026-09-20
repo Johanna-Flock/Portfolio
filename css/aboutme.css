@@ -29,13 +29,15 @@
 }
 
 .about_content {
-     width: 471px;
+     /* width: 471px; */
+     width: 520px;
+     margin-bottom: 160px;
 
 }
 
 .picture {
     position: relative;
-    margin-top: 300px;
+    margin-top: 320px;
 }
 
 
@@ -62,6 +64,8 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    /* text-align: justify;
+    hyphens: auto; */
 }
 
 .about_content li {
@@ -83,5 +87,18 @@
     font-weight: 400;
     line-height: 120%;
     letter-spacing: 0%;
+    /* text-align: justify;
+    hyphens: auto; */
 }
 
+@media (max-width: 1800px) {
+   .about_wave {
+        top: 75%;
+    }
+}
+
+@media (max-width: 1450px) {
+   .about_wave {
+        top: 75%;
+    }
+}

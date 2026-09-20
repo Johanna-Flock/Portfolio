@@ -18,7 +18,8 @@
 .skills_container {
     display: flex;
     flex-direction: column; 
-    width: 460px;
+    /* width: 460px; */
+    width: 520px;
 }
 
 .skill_card {
@@ -75,23 +76,26 @@
     background-color: #1CDAE6;
 }
 
-.skills_container span {
+.highlight {
     color: #9747FF;
 
 }
 
 .skills_container p {
-    margin-bottom: 40px; 
-    margin-top:0; 
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+.skills_container p.skills_curious {
+    margin-top: 20px;
 }
 
 .skill_btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 203px;
     height: 58px;
-    padding-top: 15px;
-    padding-right: 30px;
-    padding-bottom: 15px;
-    padding-left: 30px;
     border-radius: 10px;
     color: white;
     background-color: #70E61C;
@@ -102,9 +106,13 @@
     font-size: 23px;
     line-height: 120%;
     letter-spacing: 0%;
+    transition: 0.3s ease;
+    box-shadow: 4px 4px 4px 0px #00000040;
+    cursor: pointer;
 }
 
 .skill_btn:hover {
     transform: scale(1.2);
     background-color: #9747FF;
 }
+
