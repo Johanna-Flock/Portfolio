@@ -247,6 +247,15 @@
     margin-right: 10px;
 }
 
+.green_line_references{
+    position: absolute;
+    height: 4px;
+    background-color: #70E61C;
+    left: 100%;
+    top: 50%;
+    margin-left: 40px;
+}
+
 .reference_picture {
     width: 272px;
     height: 272px;
@@ -257,6 +266,12 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+}
+
+.reference_picture_wrapper {
+    position: relative;
+    width: 272px;
+    height: 272px;
 }
 
 .reference_img {
@@ -318,4 +333,52 @@
     height: 12px;
     background-color: #9747FF;
     border-radius: 50%;
+}
+
+
+@media (max-width: 1450px) {
+
+   .portfolio_grid {
+        height: auto; 
+    }
+
+    .portfolio_card_row {
+        flex-direction: column; 
+        gap: 50px; 
+        width: 100%; 
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .project_card {
+        width: 100%; 
+        max-width: 600px; 
+    }
+
+    .project_description {
+        padding-top:20px; 
+    }
+
+    .project_buttons {
+        margin-top: 50px; 
+        gap: 20px; 
+    }
+
+    .references_text_picture {
+        flex-direction: column-reverse; 
+        gap: 60px; 
+    }
+
+    .references {
+        margin-top: 130px;
+    }
+
+    .references_design_element {
+    position: absolute;
+    top: 300px;
+    left: 800px;
+}
+
+
+
 }

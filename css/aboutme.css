@@ -10,7 +10,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: 1440px;
-    padding: 0 24px;
+    padding: 0 40px;
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
@@ -21,7 +21,7 @@
     position: absolute;
     left: 0;
     /* top: 760px; */
-    top:70%; 
+    top:68%; 
     width: 100%;
     height:auto; 
     /* max-height: 600px; */
@@ -37,7 +37,7 @@
 
 .picture {
     position: relative;
-    margin-top: 320px;
+    margin-top: 330px;
 }
 
 
@@ -45,7 +45,7 @@
     position: relative;
     z-index: 2;
     /* width:593px;  */
-    width: 900px; 
+    width: 850px; 
     height: auto;
     display: block;
 }
@@ -92,13 +92,56 @@
 }
 
 @media (max-width: 1800px) {
-   .about_wave {
+  .about_wave {
         top: 75%;
     }
 }
 
 @media (max-width: 1450px) {
    .about_wave {
-        top: 75%;
+        top: 35%;
+        z-index: 3;
     }
+
+    .picture {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 60px;
+        z-index: 1;
+    }
+
+    .about_wrapper {
+        display:flex; 
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        z-index: auto;
+        
+    }
+
+    .about_content {
+        position: relative;
+        z-index: 5;
+        margin-bottom:0px; 
+        width:auto;
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+    .aboutme_img {
+        position: relative;
+        z-index: 2;
+    }
+
+    
+
+    .shadow_img_aboutme {
+        z-index: 1;
+    }
+
+
+}
+
+@media (max-width: 1400px) {
+  
 }

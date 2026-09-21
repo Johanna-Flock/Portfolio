@@ -385,6 +385,7 @@ function updateAllLines() {
 
     // Portfolio
     updateLineWidth('.violet_line', 'left', 100);
+    updateLineWidth('.green_line_references', 'right', 100);
 
     // Contact
     updateLineWidth('.green_line_contact', 'right', 63);

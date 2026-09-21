@@ -170,6 +170,20 @@
     height: auto;
 }
 
-@media (min-width: 1440px) {
+@media (max-width: 1640px) {
+   .hero_bottom {
+    margin-bottom: 0px; 
+    gap: 550px;
+   }
+
+   .hero_section {
+    margin-bottom: 0px; 
+   }    
+
+   
+}
+
+@media (max-width: 1450px) {
+
 
 }
