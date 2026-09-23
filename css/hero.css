@@ -13,6 +13,7 @@
     align-items: center;
     position: relative;
     width: 100%;
+     z-index: 1;
 }
 
 .shadow_img_purple {
@@ -21,6 +22,7 @@
     left: 0;
     height: auto;
     width: 679px;
+    /* z-index: 0; */
 }
 
 .shadow_img_blue{
@@ -29,14 +31,15 @@
     right: 0;
     height: auto;
     width: 679px;
+    /* z-index: 0; */
 }
 
 .hero_container  {
-    z-index: 1;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center; 
-    justify-content: center;
+    justify-content: center; 
 }
 
 .hero_content {
@@ -122,6 +125,7 @@
     justify-content:center;
     align-items:flex-end;
    gap:1000px; 
+   z-index: 10; 
 }
 
 .social_media {
@@ -131,7 +135,7 @@
     align-items: center;
     gap: 42px;
     height: 40px;
-    width: 373px;
+    /* width: 373px; */
 }
 
 .green_line {
@@ -173,7 +177,7 @@
 @media (max-width: 1640px) {
    .hero_bottom {
     margin-bottom: 0px; 
-    gap: 550px;
+    gap: 750px;
    }
 
    .hero_section {
@@ -184,6 +188,87 @@
 }
 
 @media (max-width: 1450px) {
+.hero_bottom {
+    margin-bottom: 0px; 
+    gap: 550px;
+   }
+
+   .hero_content{
+    width:1000px; 
+   }
+
+
+}
+
+@media (max-width: 1024px) {
+
+     .hero_content{
+    width:auto; 
+   }
+
+   .hero_subtitle {
+    width: 600px;
+    height: auto;
+    font-size: 55px;
+    }
+
+    .hero_title {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    width:600px; 
+
+}
+
+.hero_bottom {
+    margin-bottom: 0px; 
+    gap: 450px;
+   }
+
+    .shadow_img_purple {
+        width: 360px;
+        left: 0;
+         top: -70%;
+    }
+
+    .shadow_img_blue {
+        width: 300px;
+        right: 0;
+        top: 27%;     
+       
+    }
+
+
+}
+
+@media (max-width: 850px) {
+
+    .hero_bottom {
+        margin-bottom: 0;
+        gap: 300px;
+    }
+
+    .hero_title {
+        font-size: 60px;
+        width: 500px;
+    }
+
+    .hero_subtitle {
+        width: 500px;
+        height: auto;
+        font-size: 45px;
+    }
+
+    .hero_container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .Iam {
+        font-size: 60px;
+    }
 
 
 }

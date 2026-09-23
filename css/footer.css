@@ -67,3 +67,35 @@
 .footer_link:hover::after {
     transform: scaleX(1);
 }
+
+.footer_wrapper_mobile {
+    display:none; 
+}
+
+
+@media (max-width: 850px) {
+
+  .footer_wrapper {
+    display:none; 
+  }
+
+
+  .footer_wrapper_mobile {
+    display:flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+    margin-top: 60px;
+   
+  }
+
+  .footer_wrapper_mobile .nav_hero {
+    margin-bottom: 40px;
+  }
+
+  .portfolio_footer {
+    height: 450px; 
+  }
+  
+}

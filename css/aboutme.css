@@ -83,6 +83,7 @@
 
 .about_content p {
     margin-bottom: 50px;
+    margin-top: 30px;
     font-family: Poppins;
     font-weight: 400;
     line-height: 120%;
@@ -142,6 +143,66 @@
 
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1024px) {
+
+    .aboutme_img {
+        width:700px; 
+    }
+
+    .about_wave {
+        top:32%; 
+        z-index:3; 
+    }
+
+    .about_content {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
   
+}
+
+@media (max-width: 850px) {
+
+    .aboutme_img {
+        width:700px; 
+    }
+
+    .about_wave {
+        top:31%; 
+        z-index:3; 
+    }
+  
+}
+
+
+@media (max-width: 800px) {
+
+   .aboutme_img {
+        width:500px; 
+    }
+
+    .about_wave {
+        top:28%; 
+        z-index:3; 
+    }
+
+    .about_content {
+       margin-left: 0;
+        margin-right: 0;
+    }
+
+}
+
+
+@media (max-width: 570px) {
+
+   .aboutme_img {
+        width:400px; 
+    }
+
+    .about_wave {
+        top:21%; 
+        z-index:3; 
+    }
+
 }

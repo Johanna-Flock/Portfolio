@@ -401,3 +401,32 @@ window.addEventListener('resize', updateAllLines);
 window.addEventListener('load', updateAllLines);
 
 updateAllLines();
+
+//Bürger - Menü
+
+const burgerMenu = document.querySelector('.burger_menu');
+const mobileMenuOverlay = document.querySelector('.mobile_menu_overlay');
+const mobileNavLinks = document.querySelectorAll('.mobile_nav_btn');
+
+burgerMenu.addEventListener('click', () => {
+
+    burgerMenu.classList.toggle('open');
+    mobileMenuOverlay.classList.toggle('open');
+
+    const isOpen = burgerMenu.classList.contains('open');
+
+    burgerMenu.setAttribute('aria-expanded', isOpen);
+});
+
+
+mobileNavLinks.forEach(link => {
+
+    link.addEventListener('click', () => {
+
+        burgerMenu.classList.remove('open');
+        mobileMenuOverlay.classList.remove('open');
+
+        burgerMenu.setAttribute('aria-expanded', 'false');
+    });
+
+});

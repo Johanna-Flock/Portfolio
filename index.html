@@ -18,33 +18,87 @@
 </head>
 
 <body>
-
-    <!-- =========================
-         HEADER / NAVBAR
-    ========================== -->
     <header class="header">
         <nav class="navbar">
             <div class="navbar_container">
                 <div class="navbar_name">
-                    <a href="#hero" class="nav_hero"><img src="icons/Johannalogo_version3.png" alt="Johanna Flock"
-                            class="nav_hero_img"></a>
+                    <a href="#hero" class="nav_hero">
+                        <img src="icons/Johannalogo_version3.png" alt="Johanna Flock" class="nav_hero_img">
+                    </a>
                 </div>
-
                 <div class="navbar_menu">
+                    <div class="nav_links">
+                        <a href="#about" class="nav_btn subtitles" data-i18n="aboutTitle">
+                            About me
+                        </a>
 
-                    <div class="nav_links ">
-                        <a href="#about" class="nav_btn subtitles" data-i18n="aboutTitle">About me</a>
-                        <a href="#portfolio" class="nav_btn subtitles" data-i18n="portfolioTitle">Portfolio</a>
-                        <a href="#contact" class="nav_btn subtitles" data-i18n="contactTitle">Contact</a>
+                        <a href="#portfolio" class="nav_btn subtitles" data-i18n="portfolioTitle">
+                            Portfolio
+                        </a>
+
+                        <a href="#contact" class="nav_btn subtitles" data-i18n="contactTitle">
+                            Contact
+                        </a>
                     </div>
 
                     <div class="language_switch">
-                        <button class="language_btn active_language_button" data-language="de">DE</button>
-                        <button class="language_btn" data-language="en">EN</button>
+                        <button class="language_btn active_language_button" data-language="de">
+                            DE
+                        </button>
+
+                        <button class="language_btn" data-language="en">
+                            EN
+                        </button>
                     </div>
 
                 </div>
+                <button class="burger_menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobile_menu">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
             </div>
+            <div class="mobile_menu_overlay" id="mobile_menu">
+
+                <div class="mobile_menu_content">
+
+                    <div class="mobile_nav_links">
+
+                        <a href="#about" class="nav_btn subtitles mobile_nav_btn" data-i18n="aboutTitle">
+                            About me
+                        </a>
+
+                        <a href="#portfolio" class="nav_btn subtitles mobile_nav_btn" data-i18n="portfolioTitle">
+                            Portfolio
+                        </a>
+
+                        <a href="#contact" class="nav_btn subtitles mobile_nav_btn" data-i18n="contactTitle">
+                            Contact
+                        </a>
+
+                        <div class="language_switch mobile_language_switch">
+
+                            <span class="bold_font active_language_button" data-language="de">
+                                DE
+                            </span>
+
+                            <span class="language_separator">/</span>
+
+                            <span class="bold_font" data-language="en">
+                                EN
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </nav>
     </header>
     <section id="hero" class="hero_section">
@@ -102,7 +156,7 @@
 
             <div class="about_content">
 
-                <h2 class="section_title" data-i18n="aboutTitle">
+                <h2 data-i18n="aboutTitle">
                     About Me
                 </h2>
 
@@ -125,7 +179,9 @@
                             <img src="icons/bulb desktop.png" alt="Bulb">
 
                             <span data-i18n="problemSolvingText">
-                                I get into a real flow when I can develop tailored features for customers. Through feedback and collaboration, I find out which needs and challenges a product should address. For me, good software starts with understanding the people who use it.
+                                I get into a real flow when I can develop tailored features for customers. Through
+                                feedback and collaboration, I find out which needs and challenges a product should
+                                address. For me, good software starts with understanding the people who use it.
                             </span>
                         </li>
 
@@ -134,7 +190,9 @@
                             <img src="icons/puzzle desktop.png" alt="JavaScript">
 
                             <span data-i18n="passionText">
-                                As part of a team, I enjoy thinking about how new features or products can be meaningfully integrated into an existing architecture. I find it especially exciting when this results in an elegant solution that is simple and intuitive to use.
+                                As part of a team, I enjoy thinking about how new features or products can be
+                                meaningfully integrated into an existing architecture. I find it especially exciting
+                                when this results in an elegant solution that is simple and intuitive to use.
 
                             </span>
                         </li>
@@ -235,7 +293,9 @@
                 </div>
 
                 <p data-i18n="skillsText">
-                    Through my work in technical support, I eventually wanted to do more than just solve problems – I wanted to understand, develop, and create solutions myself. That’s how I got into web development and programming. Through my own projects, I continuously learn and develop my skills further.
+                    Through my work in technical support, I eventually wanted to do more than just solve problems – I
+                    wanted to understand, develop, and create solutions myself. That’s how I got into web development
+                    and programming. Through my own projects, I continuously learn and develop my skills further.
                 </p>
                 <h3>
                     <span data-i18n="skillsOfferStart">Looking for</span>
@@ -388,11 +448,11 @@
                         </div>
                     </div>
                     <div class="reference_picture_wrapper">
-                    <div class="reference_picture">
-                        <img src="img/place holder 3.png" alt="Referenceperson" id="referenceImage"
-                            class="reference_img">
-                    </div>
-                    <div class="green_line_references"></div>
+                        <div class="reference_picture">
+                            <img src="img/place holder 3.png" alt="Referenceperson" id="referenceImage"
+                                class="reference_img">
+                        </div>
+                        <div class="green_line_references"></div>
                     </div>
                 </div>
                 <div class="arrow_switch">
@@ -418,119 +478,121 @@
     <section id="contact" class="contact_section">
         <img src="img/purple shadow contact.png" alt="purple_shadow" class="purple_shadow_contact">
         <div class="contact_wrapper">
-
-            <div class="contact_section_title">
-                <h2 data-i18n="contactTitle">
-                    Contact
-                </h2>
-                <div class="green_line_contact"></div>
-            </div>
-            <div class="contact_content">
-
-                <div class="contact_description">
-                    <div class="contact_problem_to_solve">
-                        <div class="blue_line_contact"></div>
-                        <h3 data-i18n="contactQuestion">Let’s build something together</h3>
-                    </div>
-                    <p data-i18n="contactText">I’m looking forward to new challenges in frontend and product development – especially at the intersection of technology, users, and product.</p>
-                    <p data-i18n="contactOffer">Do you have a project or position where I could contribute? I’d love to hear from you.</p>
+            <div class="contact_inner">
+                <div class="contact_section_title">
+                    <h2 data-i18n="contactTitle">
+                        Contact
+                    </h2>
+                    <div class="green_line_contact"></div>
                 </div>
+                <div class="contact_content">
 
-
-                <form class="contact_form">
-                    <div class="form_field">
-                        <input id="name" type="text" name="name" placeholder="Your Name" class="form_input"
-                            data-i18n="namePlaceholder">
-
-                        <img src="icons/redframe.png" alt="" class="validation_icon error_icon">
-                        <img src="icons/greenframe.png" alt="" class="validation_icon success_icon">
-
-                        <p class="required_message" data-i18n="nameRequired">
-                            Your name is required.
-                        </p>
-
-                        <p class="invalid_message" data-i18n="nameInvalid">
-                            Your name needs at least 2 characters.
-                        </p>
+                    <div class="contact_description">
+                        <div class="contact_problem_to_solve">
+                            <div class="blue_line_contact"></div>
+                            <h3 data-i18n="contactQuestion">Let’s build something together</h3>
+                        </div>
+                        <p data-i18n="contactText">I’m looking forward to new challenges in frontend and product
+                            development – especially at the intersection of technology, users, and product.</p>
+                        <p data-i18n="contactOffer">Do you have a project or position where I could contribute? I’d love
+                            to hear from you.</p>
                     </div>
 
 
-                    <div class="form_field">
-                        <input id="email" type="email" name="email" placeholder="Your E-Mail" class="form_input"
-                            data-i18n="emailPlaceholder">
+                    <form class="contact_form">
+                        <div class="form_field">
+                            <input id="name" type="text" name="name" placeholder="Your Name" class="form_input"
+                                data-i18n="namePlaceholder">
 
-                        <img src="icons/redframe.png" alt="" class="validation_icon error_icon">
-                        <img src="icons/greenframe.png" alt="" class="validation_icon success_icon">
+                            <img src="icons/redframe.png" alt="" class="validation_icon error_icon">
+                            <img src="icons/greenframe.png" alt="" class="validation_icon success_icon">
 
-                        <p class="required_message" data-i18n="emailRequired">
-                            Your email is required.
-                        </p>
-
-                        <p class="invalid_message" data-i18n="emailInvalid">
-                            Please enter a valid email address.
-                        </p>
-                    </div>
-
-
-                    <div class="form_field">
-                        <textarea id="message" name="message" placeholder="Your message" class="form_textarea"
-                            data-i18n="messagePlaceholder"></textarea>
-
-                        <img src="icons/redframe.png" alt="" class="validation_icon error_icon">
-                        <img src="icons/greenframe.png" alt="" class="validation_icon success_icon">
-
-                        <p class="required_message" data-i18n="messageRequired">
-                            Your message is required.
-                        </p>
-
-                        <p class="invalid_message" data-i18n="messageInvalid">
-                            Your message needs at least 10 characters.
-                        </p>
-                    </div>
-
-
-                    <div class="checkbox_wrapper">
-                        <label class="checkbox_label">
-                            <input type="checkbox" name="privacy" class="input_checkbox" required>
-
-                            <span class="custom_checkbox"></span>
-
-                            <p>
-                                <span data-i18n="privacyTextStart">
-                                    I've read the
-                                </span>
-
-                                <span data-i18n="privacyPolicy">
-                                    privacy policy
-                                </span>
-
-                                <span data-i18n="privacyTextEnd">
-                                    and agree to the processing of my data as outlined.
-                                </span>
+                            <p class="required_message" data-i18n="nameRequired">
+                                Your name is required.
                             </p>
-                        </label>
 
-                        <p class="privacy_error" data-i18n="privacyError">
-                            Please accept the privacy policy.
-                        </p>
-                    </div>
+                            <p class="invalid_message" data-i18n="nameInvalid">
+                                Your name needs at least 2 characters.
+                            </p>
+                        </div>
 
 
-                    <button type="button" class="submit_btn" onclick="sendMail()" data-i18n="sendMessage">
-                        Send message
-                    </button>
-                </form>
-                <a href="#hero" class="up_btn">
-                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
-                        <path
-                            d="M18 15.828L13.343 20.485C12.9525 20.8755 12.3194 20.8755 11.929 20.485C11.5385 20.0945 11.5385 19.4615 11.929 19.071L18.2928 12.7071C18.6834 12.3166 19.3165 12.3166 19.7071 12.7071L26.071 19.071C26.4614 19.4615 26.4614 20.0945 26.071 20.485C25.6805 20.8755 25.0474 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5522 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z"
-                            fill="white" />
-                    </svg>
+                        <div class="form_field">
+                            <input id="email" type="email" name="email" placeholder="Your E-Mail" class="form_input"
+                                data-i18n="emailPlaceholder">
 
-                </a>
+                            <img src="icons/redframe.png" alt="" class="validation_icon error_icon">
+                            <img src="icons/greenframe.png" alt="" class="validation_icon success_icon">
+
+                            <p class="required_message" data-i18n="emailRequired">
+                                Your email is required.
+                            </p>
+
+                            <p class="invalid_message" data-i18n="emailInvalid">
+                                Please enter a valid email address.
+                            </p>
+                        </div>
+
+
+                        <div class="form_field">
+                            <textarea id="message" name="message" placeholder="Your message" class="form_textarea"
+                                data-i18n="messagePlaceholder"></textarea>
+
+                            <img src="icons/redframe.png" alt="" class="validation_icon error_icon">
+                            <img src="icons/greenframe.png" alt="" class="validation_icon success_icon">
+
+                            <p class="required_message" data-i18n="messageRequired">
+                                Your message is required.
+                            </p>
+
+                            <p class="invalid_message" data-i18n="messageInvalid">
+                                Your message needs at least 10 characters.
+                            </p>
+                        </div>
+
+
+                        <div class="checkbox_wrapper">
+                            <label class="checkbox_label">
+                                <input type="checkbox" name="privacy" class="input_checkbox" required>
+
+                                <span class="custom_checkbox"></span>
+
+                                <p class="checkbox_text">
+                                    <span data-i18n="privacyTextStart">
+                                        I've read the
+                                    </span>
+
+                                    <span data-i18n="privacyPolicy">
+                                        privacy policy
+                                    </span>
+
+                                    <span data-i18n="privacyTextEnd">
+                                        and agree to the processing of my data as outlined.
+                                    </span>
+                                </p>
+                            </label>
+
+                            <p class="privacy_error" data-i18n="privacyError">
+                                Please accept the privacy policy.
+                            </p>
+                        </div>
+
+
+                        <button type="button" class="submit_btn" onclick="sendMail()" data-i18n="sendMessage">
+                            Send message
+                        </button>
+                    </form>
+                    <a href="#hero" class="up_btn">
+                        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
+                            <path
+                                d="M18 15.828L13.343 20.485C12.9525 20.8755 12.3194 20.8755 11.929 20.485C11.5385 20.0945 11.5385 19.4615 11.929 19.071L18.2928 12.7071C18.6834 12.3166 19.3165 12.3166 19.7071 12.7071L26.071 19.071C26.4614 19.4615 26.4614 20.0945 26.071 20.485C25.6805 20.8755 25.0474 20.8755 24.657 20.485L20 15.828L20 27C20 27.5523 19.5522 28 19 28C18.4477 28 18 27.5523 18 27L18 15.828Z"
+                                fill="white" />
+                        </svg>
+
+                    </a>
+                </div>
             </div>
-
         </div>
     </section>
 
@@ -566,8 +628,38 @@
                     <img src="icons/linkedin button.png" alt="LinkedIn" class="social_media_icon">
                 </a>
             </div>
-
         </div>
+            <div class="footer_wrapper_mobile">
+
+                <a href="#hero" class="nav_hero">
+                    <img src="icons/Johannalogo_version3.png" alt="Johanna Flock" class="nav_hero_img">
+                </a>
+                <p>&copy; Johanna 2026</p>
+                <div class="footer_social_media">
+                    <a href="https://github.com/Johanna-Flock" target="_blank">
+                        <img src="icons/github button.png" alt="GitHub" class="social_media_icon">
+                    </a>
+
+                    <a href="mailto:johanna.j.f@web.de">
+                        <img src="icons/email button.png" alt="Email" class="social_media_icon">
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/dein-profil/" target="_blank">
+                        <img src="icons/linkedin button.png" alt="LinkedIn" class="social_media_icon">
+                    </a>
+                </div>
+
+                <div class="footer_links">
+                    <a href="legal_notice.html" class="footer_link">
+                        Legal Notice
+                    </a>
+
+                    <a href="privacy_policy.html" class="footer_link">
+                        Privacy Policy
+                    </a>
+                </div>
+
+            </div>
 
     </footer>
     <script src="script.js"></script>

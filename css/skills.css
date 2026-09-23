@@ -54,18 +54,9 @@
     position: relative;
     display: flex; 
     align-items: center;
-    margin-bottom:50px; 
+    margin-bottom:30px; 
     gap:20px; 
 }
-
-/* .blue_line {
-    position: absolute;
-    left: 46%;
-    margin-left: 40px;
-    width: 100vw;
-    height: 4px;
-    background-color: #1CDAE6;
-} */
 
 .blue_line {
     position: absolute;
@@ -187,4 +178,37 @@
     gap: 80px;
 
 }
+
+@media (max-width: 1024px) {
+
+    .skills_container {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+  
 }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .skills_container {
+       margin-left: 0;
+        margin-right: 0;
+    }
+
+
+
+
+}
+
+
+@media (max-width: 570px) {
+
+
+
+}
+
+
+
