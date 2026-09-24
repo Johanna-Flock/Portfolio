@@ -1,9 +1,9 @@
 .contact_section {
-    margin-top:150px; 
+    margin-top: 150px;
     margin-bottom: 100px;
     position: relative;
     z-index: 10;
-    margin-bottom: 250px; 
+    margin-bottom: 250px;
 }
 
 .contact_wrapper {
@@ -19,9 +19,9 @@
 }
 
 .purple_shadow_contact {
-    position:absolute; 
-    top: -390px; 
-    right:0; 
+    position: absolute;
+    top: -390px;
+    right: 0;
 }
 
 .contact_section_title {
@@ -41,7 +41,7 @@
     margin-left: 40px;
     height: 4px;
     background: #70E61C;
-    z-index: 100; 
+    z-index: 100;
 }
 
 
@@ -54,11 +54,11 @@
 }
 
 .up_btn {
-    position:absolute; 
-    top:750px; 
-    right:50px; 
-    width: 39px; 
-    height: 39px; 
+    position: absolute;
+    top: 750px;
+    right: 50px;
+    width: 39px;
+    height: 39px;
 }
 
 .up_btn:hover svg rect {
@@ -76,9 +76,9 @@
     padding: 15px 25px;
     border: 1px solid #9747FF;
     background-color: #141D2F;
-    color:white; 
-    position:relative; 
-    z-index: 10; 
+    color: white;
+    position: relative;
+    z-index: 10;
     box-sizing: border-box;
 }
 
@@ -105,9 +105,9 @@
     padding: 15px 25px;
     border: 1px solid #9747FF;
     background-color: #141D2F;
-    color:white; 
-    position:relative; 
-    z-index: 10; 
+    color: white;
+    position: relative;
+    z-index: 10;
     box-sizing: border-box;
 }
 
@@ -165,7 +165,7 @@
 
 .form_input.error,
 .form_textarea.error {
-    border: 1px solid #E61C40 ;
+    border: 1px solid #E61C40;
 }
 
 .form_input.success,
@@ -192,7 +192,8 @@
 
 .checkbox_label {
     display: flex;
-    align-items: center; /* oder flex-start */
+    align-items: center;
+    /* oder flex-start */
     gap: 12px;
 }
 
@@ -220,7 +221,7 @@
     cursor: pointer;
 }
 
-.input_checkbox:checked + .custom_checkbox::after {
+.input_checkbox:checked+.custom_checkbox::after {
     content: "";
     position: absolute;
     width: 4px;
@@ -233,7 +234,7 @@
 }
 
 .checkbox_label p span {
-    color: #9747FF; 
+    color: #9747FF;
 }
 
 .privacy_error {
@@ -248,7 +249,7 @@
     width: 253px;
     height: 58px;
     background: #B6B6B6;
-    color:white; 
+    color: white;
     font-size: 23px;
     font-family: Poppins;
     display: flex;
@@ -261,10 +262,10 @@
 }
 
 .contact_problem_to_solve {
-    display:flex; 
-    justify-content: flex-start; 
-    align-items:center; 
-    gap: 20px; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
     position: relative;
 }
 
@@ -277,11 +278,11 @@
 }
 
 .contact_description {
-    display:flex; 
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap:24px; 
-    width: 573px; 
+    gap: 24px;
+    width: 573px;
     font-family: Poppins;
     font-weight: 400;
     font-size: 23px;
@@ -295,10 +296,10 @@
 }
 
 .contact_content {
-    display:flex; 
-    justify-content:center; 
+    display: flex;
+    justify-content: center;
     align-items: flex-start;
-    gap:250px; 
+    gap: 250px;
 }
 
 .submit_btn.active {
@@ -315,52 +316,52 @@
 @media (max-width: 1450px) {
 
 
-.contact_inner {
-    width: calc(100% - 400px);
-    margin: 0 auto;
-}
+    .contact_inner {
+        width: calc(100% - 400px);
+        margin: 0 auto;
+    }
 
-.contact_content {
-    display: flex;
-    display:flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 100px;
-    width: 100%;
-}
+    .contact_content {
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 100px;
+        width: 100%;
+    }
 
-.contact_description {
-    width:auto; 
-}
+    .contact_description {
+        width: auto;
+    }
 
-.purple_shadow_contact {
-    position: absolute;
-    top: 10px;
-    right: 0;
-}
+    .purple_shadow_contact {
+        position: absolute;
+        top: 10px;
+        right: 0;
+    }
 
-.up_btn {
-    position: absolute;
-    top: 900px;
-    right: 100px;
-   
-}
+    .up_btn {
+        position: absolute;
+        top: 1000px;
+        right: 100px;
 
-.contact_section {
-    margin-bottom: 150px;
-}
+    }
 
-.contact_section_title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 50px;
-    width: 100%;
-    position: relative;
-    z-index: 10;
-    margin-bottom: 30px;
-}
+    .contact_section {
+        margin-bottom: 150px;
+    }
+
+    .contact_section_title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+        margin-bottom: 30px;
+    }
 
 
 }
@@ -368,35 +369,35 @@
 
 @media (max-width: 1150px) {
 
-.contact_content {
-    position: relative;
-        display:flex; 
+    .contact_content {
+        position: relative;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 70px; 
-        width:auto;
+        gap: 70px;
+        width: auto;
         z-index: 10;
-}
+    }
 
-.contact_description {
-    width:auto; 
-}
+    .contact_description {
+        width: auto;
+    }
 
-.purple_shadow_contact {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 400px;
-    height: auto;
-}
+    .purple_shadow_contact {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 400px;
+        height: auto;
+    }
 
-.up_btn {
-    position: absolute;
-    top: 860px;
-    right: -110px;
-   
-}
+    .up_btn {
+        position: absolute;
+        top: 900px;
+        right: -110px;
+
+    }
 }
 
 
@@ -408,30 +409,54 @@
         margin-left: 100px;
         margin-right: 100px;
     }
-  
+
+    
+    .up_btn {
+        position: absolute;
+        top: 860px;
+        right: 0;
+
+    }
+
 }
 
 @media (max-width: 800px) {
 
     .contact_inner {
         width: auto;
-       margin-left: 0;
+        margin-left: 0;
         margin-right: 0;
     }
 
+    .up_btn {
+        position: absolute;
+        top: 830px;
+        right: 40px;
+    }
 
-.up_btn {
-    position: absolute;
-    top: 830px;
-    right: 40px;
-   
+    .checkbox_text {
+        margin-right: 75px;
+    }
+
+    .contact_description {
+        font-size: 20px;
+    }
+
 }
 
+@media (max-width: 650px) {
 
-.checkbox_text {
-    margin-right: 75px; 
+.contact_description {
+        font-size: 16px;
+    }
+
+.contact_section {
+    margin-top:100px; 
 }
 
+.contact_content {
+    gap:55px; 
+}
 
 
 }

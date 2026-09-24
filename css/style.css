@@ -116,5 +116,25 @@ body {
     body {
         font-size: 20px; 
     }
+
+    h3 {
+        font-size: 25px; 
+    }
+  
+}
+
+@media (max-width: 650px) {
+
+    h2 {
+        font-size:45px; 
+    }
+
+    body {
+        font-size: 16px; 
+    }
+
+    h3 {
+        font-size: 24px; 
+    }
   
 }

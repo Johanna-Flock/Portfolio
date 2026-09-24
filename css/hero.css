@@ -56,9 +56,16 @@
     white-space: nowrap;
     font-family: Poppins;
     font-weight: 400;
-    line-height: 120%;
+    line-height: 90px;
     letter-spacing: 0%;
     margin: 0;
+    position: relative;
+    left: 23px;
+}
+
+.Iam span {
+    margin: 0;
+    padding: 0;
 }
 
 .hero_title {
@@ -268,6 +275,73 @@
 
     .Iam {
         font-size: 60px;
+    }
+
+     .hero_info {
+        gap:0px; 
+    }
+
+
+}
+
+@media (max-width: 650px) {
+
+    .hero_bottom {
+        display:flex; 
+        justify-content: center;
+        align-items: center; 
+        gap:0px; 
+    }
+
+    .hero_title {
+        font-size: 50px;
+        width: 400px;
+    }
+
+    .hero_subtitle {
+        width: 400px;
+        height: auto;
+        font-size: 35px;
+    }
+
+    .Iam {
+        font-size: 50px;
+    }
+
+    .scroll_text {
+        display:none; 
+    }
+
+    .scroll_arrow {
+        display:none; 
+    }
+
+    .hero_btn {
+        width: 133px; 
+        height: 49px; 
+        font-size: 20px; 
+    }
+
+    
+   
+}
+
+@media (max-width: 530px) {
+
+  
+    .hero_title {
+        font-size: 45px;
+        width: 300px;
+    }
+
+    .hero_subtitle {
+        width: 300px;
+        height: auto;
+        font-size: 35px;
+    }
+
+    .Iam {
+        font-size: 45px;
     }
 
 

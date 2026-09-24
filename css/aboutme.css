@@ -193,6 +193,16 @@
 
 }
 
+@media (max-width: 650px) {
+
+.about_section {
+    margin-top:100px; 
+}
+
+
+}
+
+
 
 @media (max-width: 570px) {
 
