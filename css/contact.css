@@ -446,6 +446,12 @@
 
 @media (max-width: 650px) {
 
+    .contact_wrapper {
+
+    padding: 0 20px;
+
+}
+
 .contact_description {
         font-size: 16px;
     }
@@ -458,5 +464,54 @@
     gap:55px; 
 }
 
+  .up_btn {
+        position: absolute;
+        top: 830px;
+        right: 40px;
+    }
 
+
+.submit_btn {
+    width:195px; 
+    height: 49px; 
+    font-size: 16px; 
+}
+
+
+}
+
+
+@media (max-width: 570px) {
+  .up_btn {
+        position: absolute;
+        top: 890px;
+        right: 0px;
+    }
+}
+
+
+@media (max-width: 460px) {
+
+  .up_btn {
+        position: absolute;
+        top: 950px;
+        right: 0px;
+    }
+
+
+}
+
+
+@media (max-width: 350px) {
+
+  .up_btn {
+        position: absolute;
+        top: 1050px;
+        right: 30px;
+    }
+
+
+        .checkbox_text {
+        margin-right: 0px;
+    }
 }

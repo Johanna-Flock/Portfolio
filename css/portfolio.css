@@ -500,3 +500,36 @@
 }
 
 }
+
+
+@media (max-width: 360px) {
+
+.project_card {
+    height: 250px; 
+    width: 250px;
+}
+
+.shadow_portfolio_green {
+    width: 190px; 
+}
+
+
+.shadow_portfolio_blue {
+        top: 60px;
+        width: 190px; 
+}
+
+    .reference_text {
+        width: 250px;
+        /* height: 189px; */
+        height: auto;
+        font-size: 16px; 
+    }
+
+
+    .portfolio_section {
+    margin-top:50px; 
+}
+
+}
+

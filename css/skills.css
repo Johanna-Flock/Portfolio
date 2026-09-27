@@ -200,6 +200,12 @@
 
 @media (max-width: 650px) {
 
+    .skills_wrapper {
+
+    padding: 0 20px;
+
+}
+
     .skill_btn_mobile {
        visibility: hidden;
     }
@@ -260,6 +266,26 @@
 
 .all_skills_mobile {
     gap:30px; 
+}
+
+}
+
+@media (max-width: 450px) {
+
+.skills_grid {
+    gap:15px; 
+}
+
+.all_skills_mobile {
+    gap:55px; 
+}
+
+}
+
+@media (max-width: 380px) {
+
+    .skills_section {
+    margin-bottom:50px; 
 }
 
 }

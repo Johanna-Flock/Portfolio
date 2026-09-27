@@ -182,7 +182,7 @@
     }
 
     .about_wave {
-        top:28%; 
+        top:30%; 
         z-index:3; 
     }
 
@@ -195,8 +195,25 @@
 
 @media (max-width: 650px) {
 
+
+.about_wrapper {
+
+    padding: 0 20px;
+
+}
+
 .about_section {
     margin-top:100px; 
+}
+
+.about_content li img {
+    width: 26px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+.about_content li {
+    gap:10px; 
 }
 
 
@@ -211,8 +228,39 @@
     }
 
     .about_wave {
-        top:21%; 
+        top:27%; 
         z-index:3; 
     }
+
+}
+
+@media (max-width: 420px) {
+
+   .aboutme_img {
+        width:300px; 
+    }
+
+    .about_wave {
+        top:19%; 
+        z-index:3; 
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .about_wave {
+        top:16%; 
+        z-index:3; 
+    }
+
+     .picture {
+        margin-bottom: 0px;
+    }
+
+    .about_section {
+    margin-top:50px; 
+    margin-bottom:50px; 
+}
 
 }

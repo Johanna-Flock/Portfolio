@@ -346,3 +346,40 @@
 
 
 }
+
+@media (max-width: 420px) {
+
+    .hero_content {
+        max-width: 300px;
+        
+    }
+
+    .Iam {
+        left:0px; 
+    }
+
+    .hero_info {
+        right:25px; 
+        position:relative; 
+    }
+
+    .hero_title {
+        font-size: 45px;
+        width: auto;
+    }
+
+    .hero_subtitle {
+        width: auto;
+        height: auto;
+        font-size: 35px;
+    }
+
+    .shadow_img_purple {
+        width: 240px; }
+
+
+    .shadow_img_blue {
+        width:200px; 
+    }
+
+}
