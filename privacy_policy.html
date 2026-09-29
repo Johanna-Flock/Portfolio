@@ -21,25 +21,81 @@
         <nav class="navbar">
             <div class="navbar_container">
                 <div class="navbar_name">
-                    <a href="#hero" class="nav_hero"><img src="icons/Johannalogo_version3.png" alt="Johanna Flock"
-                            class="nav_hero_img"></a>
+                    <a href="#hero" class="nav_hero">
+                        <img src="icons/Johannalogo_version3.png" alt="Johanna Flock" class="nav_hero_img">
+                    </a>
                 </div>
-
                 <div class="navbar_menu">
+                    <div class="nav_links">
+                        <a href="#about" class="nav_btn subtitles" data-i18n="aboutTitle">
+                            About me
+                        </a>
 
-                    <div class="nav_links ">
-                        <a href="#about" class="nav_btn subtitles">About</a>
-                        <a href="#portfolio" class="nav_btn subtitles">Portfolio</a>
-                        <a href="#contact" class="nav_btn subtitles">Contact</a>
+                        <a href="#portfolio" class="nav_btn subtitles" data-i18n="portfolioTitle">
+                            Portfolio
+                        </a>
+
+                        <a href="#contact" class="nav_btn subtitles" data-i18n="contactTitle">
+                            Contact
+                        </a>
                     </div>
 
                     <div class="language_switch">
-                        <button class="language_btn active">DE</button>
-                        <button class="language_btn">EN</button>
+                        <button class="language_btn active_language_button" data-language="de">
+                            DE
+                        </button>
+
+                        <button class="language_btn" data-language="en">
+                            EN
+                        </button>
                     </div>
 
                 </div>
+                <button class="burger_menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobile_menu">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
             </div>
+            <div class="mobile_menu_overlay" id="mobile_menu">
+
+                <div class="mobile_menu_content">
+
+                    <div class="mobile_nav_links">
+
+                        <a href="#about" class="nav_btn subtitles mobile_nav_btn" data-i18n="aboutTitle">
+                            About me
+                        </a>
+
+                        <a href="#portfolio" class="nav_btn subtitles mobile_nav_btn" data-i18n="portfolioTitle">
+                            Portfolio
+                        </a>
+
+                        <a href="#contact" class="nav_btn subtitles mobile_nav_btn" data-i18n="contactTitle">
+                            Contact
+                        </a>
+
+                        <div class="language_switch mobile_language_switch">
+                            <button class="bold_font active_language_button" data-language="de">
+                                DE
+                            </button>
+
+                            <span class="language_separator">/</span>
+
+                            <button class="bold_font" data-language="en">
+                                EN
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </nav>
     </header>
 
@@ -100,3 +156,9 @@
         </div>
 
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/contact_form.js"></script>
+    <script src="js/translation.js"></script>
+    </body>
+
+</html>

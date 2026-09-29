@@ -12,11 +12,9 @@
     width: 100%;
     max-width: 1440px;
     height: 100%;
-
     margin: 0 auto;
     padding: 0 40px;
     box-sizing: border-box;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,7 +27,7 @@
 
 .navbar_menu {
     width: 510px;
-    height: 35px; 
+    height: 35px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -51,7 +49,7 @@
 }
 
 .nav_btn:hover {
-    color:#70E61C;
+    color: #70E61C;
 }
 
 .nav_btn {
@@ -66,7 +64,7 @@
     bottom: -8px;
     width: 100%;
     height: 3px;
-    background-color: #9747FF; 
+    background-color: #9747FF;
     border-radius: 2px;
 }
 
@@ -97,11 +95,21 @@ a {
     border-radius: 10px;
     color: #FFFFFF;
     background-color: transparent;
-
 }
 
-.active_language_button{
+.active_language_button {
     background-color: #70E61C;
+}
+
+.mobile_language_switch button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    font-weight: 600;
+    color:white; 
+    font-size: 23px;
 }
 
 .burger_menu,
@@ -111,8 +119,6 @@ a {
 
 
 @media (max-width: 1024px) {
-
-
 
     .burger_menu {
         display: flex;
@@ -135,7 +141,7 @@ a {
         background-color: white;
         border-radius: 2px;
         transition: transform 0.3s ease,
-                    opacity 0.3s ease;
+            opacity 0.3s ease;
     }
 
     .navbar_menu {
@@ -181,7 +187,6 @@ a {
         transform: translate(-50%, -50%);
     }
 
-
     .mobile_nav_btn {
         white-space: nowrap;
     }
@@ -199,32 +204,21 @@ a {
     }
 
     .mobile_language_switch {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
-.mobile_language_switch .language_btn {
-    cursor: pointer;
-}
+    .mobile_language_switch .language_btn {
+        cursor: pointer;
+    }
 
-.language_separator {
-    color: white;
-}
+    .language_separator {
+        color: white;
+    }
 
-.active_language_button {
+    .mobile_language_switch .active_language_button {
     color: #70E61C;
     background-color: transparent;
 }
-
-.bold_font {
-    font-weight:600; 
-}
-
-}
-
-
-@media (max-width: 950px) {
-
-
 }

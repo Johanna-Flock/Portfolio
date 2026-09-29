@@ -44,9 +44,6 @@
     z-index: 100;
 }
 
-
-
-
 .contact_form {
     display: flex;
     flex-direction: column;
@@ -94,8 +91,6 @@
 .form_textarea:hover:not(.error):not(.success) {
     border: 1px solid #1CDAE6;
 }
-
-
 
 .form_textarea {
     width: 617px;
@@ -173,7 +168,6 @@
     border: 1px solid #70E61C;
 }
 
-
 .form_field {
     position: relative;
     width: 100%;
@@ -193,7 +187,6 @@
 .checkbox_label {
     display: flex;
     align-items: center;
-    /* oder flex-start */
     gap: 12px;
 }
 
@@ -363,7 +356,6 @@
         margin-bottom: 30px;
     }
 
-
 }
 
 
@@ -410,7 +402,6 @@
         margin-right: 100px;
     }
 
-    
     .up_btn {
         position: absolute;
         top: 860px;
@@ -447,42 +438,38 @@
 @media (max-width: 650px) {
 
     .contact_wrapper {
+        padding: 0 20px;
 
-    padding: 0 20px;
+    }
 
-}
-
-.contact_description {
+    .contact_description {
         font-size: 16px;
     }
 
-.contact_section {
-    margin-top:100px; 
-}
+    .contact_section {
+        margin-top: 100px;
+    }
 
-.contact_content {
-    gap:55px; 
-}
+    .contact_content {
+        gap: 55px;
+    }
 
-  .up_btn {
+    .up_btn {
         position: absolute;
         top: 830px;
         right: 40px;
     }
 
-
-.submit_btn {
-    width:195px; 
-    height: 49px; 
-    font-size: 16px; 
-}
-
-
+    .submit_btn {
+        width: 195px;
+        height: 49px;
+        font-size: 16px;
+    }
 }
 
 
 @media (max-width: 570px) {
-  .up_btn {
+    .up_btn {
         position: absolute;
         top: 890px;
         right: 0px;
@@ -492,26 +479,22 @@
 
 @media (max-width: 460px) {
 
-  .up_btn {
+    .up_btn {
         position: absolute;
         top: 950px;
         right: 0px;
     }
-
-
 }
-
 
 @media (max-width: 350px) {
 
-  .up_btn {
+    .up_btn {
         position: absolute;
         top: 1050px;
         right: 30px;
     }
 
-
-        .checkbox_text {
+    .checkbox_text {
         margin-right: 0px;
     }
 }
