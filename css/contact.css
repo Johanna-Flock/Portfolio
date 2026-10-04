@@ -32,7 +32,7 @@
     width: 100%;
     position: relative;
     z-index: 10;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .green_line_contact {
@@ -304,6 +304,14 @@
     transform: scale(1.05);
 }
 
+.checkbox_wrapper {
+    display:flex; 
+    flex-direction:column;
+    justify-content:center; 
+    align-items:center;
+    gap: 70px;
+}
+
 
 
 @media (max-width: 1450px) {
@@ -468,21 +476,12 @@
 }
 
 
-@media (max-width: 570px) {
-    .up_btn {
-        position: absolute;
-        top: 890px;
-        right: 0px;
-    }
-}
-
-
-@media (max-width: 460px) {
+@media (max-width: 430px) {
 
     .up_btn {
         position: absolute;
-        top: 950px;
-        right: 0px;
+        top: 900px;
+        right: 40px;
     }
 }
 
@@ -490,8 +489,8 @@
 
     .up_btn {
         position: absolute;
-        top: 1050px;
-        right: 30px;
+        top: 930px;
+        right: 20px;
     }
 
     .checkbox_text {

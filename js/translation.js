@@ -6,10 +6,10 @@ const translations = {
 
     de: {
         aboutTitle: "Über mich",
-        aboutText:"Hallo, ich bin Johanna und liebe es, Anwendungen zu entwickeln, die schlicht, übersichtlich und funktional sind. Im technischen Support arbeite ich täglich mit Kund:innen, verstehe ihre Anliegen und suche nach der besten, möglichen Lösung für ihre Anforderungen. Mein Ziel ist es, Software bereitzustellen, die Menschen tatsächlich weiterhilft.",
-        problemSolvingText:"In einen richtigen Flow komme ich, wenn ich für Kund:innen passgenaue Funktionen entwickeln kann. Durch Feedback und Austausch finde ich heraus, welche Bedürfnisse und Herausforderungen ein Produkt lösen soll. Gute Software beginnt für mich mit dem Verständnis der Menschen, die sie nutzen.",
-        passionText:"Im Team überlege ich gerne, wie sich neue Funktionen oder Produkte sinnvoll in eine bestehende Architektur integrieren lassen. Besonders spannend finde ich es, wenn daraus eine elegante Lösung entsteht, die einfach und intuitiv zu bedienen ist.",
-        locationText:"Ich lebe in Augsburg, Bayern und arbeite am liebsten hybrid.",
+        aboutText: "Hallo, ich bin Johanna und liebe es, Anwendungen zu entwickeln, die schlicht, übersichtlich und funktional sind. Im technischen Support arbeite ich täglich mit Kund:innen, verstehe ihre Anliegen und suche nach der besten, möglichen Lösung für ihre Anforderungen. Mein Ziel ist es, Software bereitzustellen, die Menschen tatsächlich weiterhilft.",
+        problemSolvingText: "In einen richtigen Flow komme ich, wenn ich für Kund:innen passgenaue Funktionen entwickeln kann. Durch Feedback und Austausch finde ich heraus, welche Bedürfnisse und Herausforderungen ein Produkt lösen soll. Gute Software beginnt für mich mit dem Verständnis der Menschen, die sie nutzen.",
+        passionText: "Im Team überlege ich gerne, wie sich neue Funktionen oder Produkte sinnvoll in eine bestehende Architektur integrieren lassen. Besonders spannend finde ich es, wenn daraus eine elegante Lösung entsteht, die einfach und intuitiv zu bedienen ist.",
+        locationText: "Ich lebe in Augsburg, Bayern und arbeite am liebsten hybrid.",
         skillsHeadline: "Skills",
         skillsText: "Im technischen Support wollte ich irgendwann mehr, als nur Probleme zu lösen – ich wollte selbst verstehen, entwickeln und Lösungen schaffen. So bin ich zur Webentwicklung und Programmierung gekommen. Durch meine eigenen Projekte lerne ich kontinuierlich dazu und entwickle meine Fähigkeiten immer weiter.",
         skillsOfferStart: 'Lust auf',
@@ -44,15 +44,37 @@ const translations = {
         privacyTextEnd: "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
         privacyError: "Bitte akzeptiere die Datenschutzerklärung.",
         sendMessage: "Nachricht senden",
+        privacyPolicyText: `Diese Website dient dazu, meine Arbeiten und Projekte zu präsentieren. Wenn Sie mich über das Kontaktformular kontaktieren, werden die von Ihnen angegebenen Informationen, einschließlich Ihres Namens, Ihrer E-Mail-Adresse und Ihrer Nachricht, ausschließlich zur Beantwortung Ihrer Anfrage verwendet. Ihre personenbezogenen Daten werden nicht an Dritte weitergegeben, es sei denn, dies ist gesetzlich vorgeschrieben, und sie werden nicht für Marketingzwecke verwendet. Diese Website verwendet lokal gehostete Schriftarten und stellt zum Laden der Schriftarten keine Verbindung zu Google-Servern her. Diese Website enthält Links zu Websites Dritter, einschließlich meines GitHub-Profils. Für die Inhalte und Datenschutzpraktiken dieser externen Websites bin ich nicht verantwortlich. Wenn Sie Fragen zu dieser Datenschutzerklärung haben, können Sie mich über die auf dieser Website angegebene E-Mail-Adresse kontaktieren.`,
+        privacyPolicy: "Datenschutz",
+        legalNotice: "Impressum",
+        imprint: "Angaben gemäß § 5 DDG",
+        exploringBoard: "Über das Portfolio",
+        email: "E-Mail: johanna-flock@mustermail.de",
+        acceptanceOfTerms: "Zustimmung zu den Bedingungen",
+        acknowledgment: "Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennen Sie die folgenden Bedingungen und Bestimmungen sowie alle Richtlinien, Leitlinien oder Änderungen an, die Ihnen von Zeit zu Zeit mitgeteilt werden können. Wir, die aufgeführten Studierenden, behalten uns das Recht vor, die Bedingungen und Bestimmungen jederzeit ohne vorherige Ankündigung zu aktualisieren oder zu ändern.",
+        scopeAndOwnership: "Umfang und Eigentum am Produkt",
+        portfolioDevelopment: "Portfolio wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp der Developer Akademie GmbH entwickelt. Es dient zu Bildungszwecken und ist nicht für eine umfangreiche private oder geschäftliche Nutzung vorgesehen. Daher können wir keine Garantie für eine durchgängige Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder andere Qualitätsmerkmale dieses Produkts übernehmen.",
+        designOwnership: "Das Design von Portfolio ist Eigentum der Developer Akademie GmbH. Die unbefugte Nutzung, Vervielfältigung, Änderung, Verbreitung oder Nachbildung des Designs ist ausdrücklich untersagt.",
+        proprietaryRights: "Eigentumsrechte",
+        studentOwnership: "Abgesehen von dem Eigentum der Developer Akademie GmbH am Design behalten wir, die aufgeführten Studierenden, sämtliche Eigentumsrechte am Portfolio, einschließlich aller damit verbundenen urheberrechtlich geschützten Inhalte, Marken und sonstigen geschützten Informationen.",
+        useOfProduct: "Nutzung des Produkts",
+        lawfulUse: "Das Portfolio darf ausschließlich für rechtmäßige Zwecke und unter Einhaltung aller geltenden Gesetze und Vorschriften verwendet werden. Jede Nutzung von Portfolio für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist ausdrücklich untersagt. Für Ihre Interaktionen mit anderen Nutzern von Portfolio sind Sie allein verantwortlich.",
+        disclaimerOfWarranties: "Haftungsausschluss und Haftungsbeschränkung",
+        portfolioProvidedAsIs: "Portfolio wird ohne jegliche ausdrückliche oder stillschweigende Garantie zur Verfügung gestellt. Dies umfasst insbesondere stillschweigende Garantien hinsichtlich der Gebrauchstauglichkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter. In keinem Fall haften wir, die aufgeführten Studierenden oder die Developer Akademie für direkte, indirekte, zufällige, besondere, Folge- oder beispielhafte Schäden, einschließlich, aber nicht beschränkt auf Schäden durch entgangenen Gewinn, Verlust von Geschäftsbeziehungen, Nutzungsausfall, Datenverlust oder sonstige immaterielle Verluste, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden und diese aus oder im Zusammenhang mit der Nutzung oder Leistung von Portfolio entstehen.",
+        indemnity: "Freistellung",
+        yourAgreement: "Sie erklären sich damit einverstanden, uns, die aufgeführten Studierenden, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Geschäftsführer, Vertreter und Mitarbeiter von allen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungen (einschließlich angemessener Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die aus Ihrer Nutzung von Portfolio und/oder Ihrem Verstoß gegen dieses Impressum entstehen oder damit in Zusammenhang stehen.",
+        contactInformation: "Bei Fragen oder für Mitteilungen kontaktieren Sie uns bitte unter [Kontakt-E-Mail].",
+        date: "Datum: 26. Juli 2025",
+
     },
 
     en: {
 
-        aboutTitle:"About Me",
-        aboutText:"Hello, I’m Johanna, and I love developing applications that are simple, clear, and functional. In technical support, I work with customers daily, understand their needs, and look for the best possible solution to meet their requirements. My goal is to create software that genuinely helps people.",
+        aboutTitle: "About Me",
+        aboutText: "Hello, I’m Johanna, and I love developing applications that are simple, clear, and functional. In technical support, I work with customers daily, understand their needs, and look for the best possible solution to meet their requirements. My goal is to create software that genuinely helps people.",
         problemSolvingText: "I get into a real flow when I can develop tailored features for customers. Through feedback and collaboration, I find out which needs and challenges a product should address. For me, good software starts with understanding the people who use it.",
         passionText: "As part of a team, I enjoy thinking about how new features or products can be meaningfully integrated into an existing architecture. I find it especially exciting when this results in an elegant solution that is simple and intuitive to use.",
-        locationText:"I live in Augsburg, Bavaria, and I prefer working in a hybrid setup.",
+        locationText: "I live in Augsburg, Bavaria, and I prefer working in a hybrid setup.",
         skillsHeadline: "Skills",
         skillsText: "Through my work in technical support, I eventually wanted to do more than just solve problems – I wanted to understand, develop, and create solutions myself. That’s how I got into web development and programming. Through my own projects, I continuously learn and develop my skills further.",
         skillsOfferStart: 'Looking for',
@@ -87,6 +109,27 @@ const translations = {
         privacyTextEnd: "and agree to the processing of my data as outlined.",
         privacyError: "Please accept the privacy policy.",
         sendMessage: "Send message",
+        privacyPolicyText: "This website is intended to showcase my work and projects. If you contact me using the contact form, the information you provide, including your name, email, address, and message, will only be used to respond to your inquiry. Your personal data will not beshared with third parties unless required by law and will not be used for marketing purposes.This website uses locally hosted fonts and does not establish a connection to Google servers for font loading. This website contains links to third-party websites, including my GitHub profile. I am not responsible for the content or privacy practices of these external websites. If you have any questions regarding this Privacy Policy, please contact me using the email address provided on this website.",
+        privacyPolicy: "Privacy Policy",
+        legalNotice: "Legal Notice",
+        imprint: "Imprint",
+        exploringBoard: "Exploring the Board",
+        email: "Email: johanna-flock@mustermail.de",
+        acceptanceOfTerms: "Acceptance of terms",
+        acknowledgment: "By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.",    
+        scopeAndOwnership: "Scope and ownership of the product",
+        portfolioDevelopment: "Portfolio has been developed as part of a student group project in a web development bootcamp at the Developer Akademie GmbH. It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
+        designOwnership: "The design of Portfolio is owned by the Developer Akademie GmbH. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.",   
+        proprietaryRights: "Proprietary rights",
+        studentOwnership: "Aside from the design owned by Developer Akademie GmbH, we, the listed students, retain all proprietary rights in Portfolio, including any associated copyrighted material, trademarks, and other proprietary information.",
+        useOfProduct: "Use of the product",
+        lawfulUse: "Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of Portfolio for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of Portfolio.",
+        disclaimerOfWarranties: "Disclaimer of warranties and limitation of liability",
+        portfolioProvidedAsIs: "Portfolio is provided 'as is' without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the Developer Akademie, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of Portfolio.",
+        indemnity: "Indemnity",
+        yourAgreement: "You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.",
+        contactInformation: "For any questions or notices, please contact us at [Contact Email].",
+        date: "Date: July 26, 2025",
     }
 
 };
@@ -108,7 +151,7 @@ function setLanguage(language) {
             if (element.placeholder !== undefined && element.tagName !== "BUTTON") {
                 element.placeholder = translations[language][key];
             }
-        
+
             else {
                 element.textContent = translations[language][key];
             }

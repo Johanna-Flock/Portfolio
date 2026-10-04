@@ -89,13 +89,19 @@ function showReference(index) {
  * Updates the displayed reference using the new index.
  */
 
-document.getElementById("referenceNext").addEventListener("click", function () {
-    currentReference++;
-    if (currentReference >= references.length) {
-        currentReference = 0;
-    }
-    showReference(currentReference);
-});
+const referenceNext = document.getElementById("referenceNext");
+
+if (referenceNext) {
+    referenceNext.addEventListener("click", function () {
+        currentReference++;
+
+        if (currentReference >= references.length) {
+            currentReference = 0;
+        }
+
+        showReference(currentReference);
+    });
+}
 
 /**
  * Moves to the previous reference in the list.
@@ -104,13 +110,19 @@ document.getElementById("referenceNext").addEventListener("click", function () {
  * Updates the displayed reference using the new index.
  */
 
-document.getElementById("referencePrev").addEventListener("click", function () {
-    currentReference--;
-    if (currentReference < 0) {
-        currentReference = references.length - 1;
-    }
-    showReference(currentReference);
-});
+const referencePrev = document.getElementById("referencePrev");
+
+if (referencePrev) {
+    referencePrev.addEventListener("click", function () {
+        currentReference--;
+
+        if (currentReference < 0) {
+            currentReference = references.length - 1;
+        }
+
+        showReference(currentReference);
+    });
+}
 
 /**
  * Updates the width of a decorative line based on its position.
@@ -180,8 +192,7 @@ function updateAllLines() {
     updateLineWidth('.green_line_references', 'right', 100);
     updateLineWidth('.green_line_contact', 'right', 63);
     updateLineWidth('.blue_line_contact', 'left', 100);
-    updateLineWidth('.violet_line_legal_notice', 'left', 63);
-    updateLineWidth('.violet_line_legal_notice2', 'right', 63);
+    updateLegalNoticeLines();
 }
 
 /**
@@ -194,6 +205,48 @@ function updateAllLines() {
 window.addEventListener('resize', updateAllLines);
 window.addEventListener('load', updateAllLines);
 updateAllLines();
+
+/**
+ * Calculates the left and right line widths around each heading.
+ * Measures the exact position and width of the h5 element.
+ * Leaves a fixed 40px gap between the lines and the heading.
+ * Positions the lines on the left and right side of the heading.
+ * Keeps both legal notice and privacy policy responsive.
+ */
+function updateLegalNoticeLines() {
+    const heads = document.querySelectorAll(
+        '.legal_notice_head, .privacy_policy_head'
+    );
+
+    heads.forEach(head => {
+        const title = head.querySelector('h5');
+
+        const leftLine = head.querySelector(
+            '.violet_line_legal_notice, .violet_line_privacy'
+        );
+
+        const rightLine = head.querySelector(
+            '.violet_line_legal_notice2, .violet_line_privacy2'
+        );
+
+        if (!title || !leftLine || !rightLine) return;
+
+        const headRect = head.getBoundingClientRect();
+        const titleRect = title.getBoundingClientRect();
+
+        const gap = 40;
+
+        const leftWidth =
+            titleRect.left - headRect.left - gap;
+
+        const rightWidth =
+            headRect.right - titleRect.right - gap;
+
+        leftLine.style.width = `${Math.max(0, leftWidth)}px`;
+        rightLine.style.width = `${Math.max(0, rightWidth)}px`;
+    });
+}
+
 
 /**
  * Controls the mobile navigation menu and burger button.

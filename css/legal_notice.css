@@ -9,32 +9,45 @@
     align-items: center;
     gap:20px; 
     position: relative;
+    width: 100%;
 }
 
-.violet_line_legal_notice {
+.privacy_policy_head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.violet_line_legal_notice,
+.violet_line_legal_notice2,
+.violet_line_privacy,
+.violet_line_privacy2 {
     position: absolute;
     height: 4px;
     background-color: #9747FF;
-    right: 63%;
-    margin-right: 40px;
+    top: 63%;
+    transform: translateY(-50%);
 }
 
-.violet_line_legal_notice2 {
-    position: absolute;
-    height: 4px;
-    background-color: #9747FF;
-    left: 63%;
-    margin-left: 40px;
+.violet_line_legal_notice,
+.violet_line_privacy {
+    left: 0;
+}
+
+.violet_line_legal_notice2,
+.violet_line_privacy2 {
+    right: 0;
 }
 
 .legal_notice_content ul {
-    font-size: 16px; 
+    font-size: 19px; 
     font-weight: 400;
     font-family: Open Sans;
     line-height: 120%;
     letter-spacing: 0%;
-    margin-top:20px; 
-    /* margin-bottom:20px;  */
+    margin-top:20px;
 }
 
 .legal_notice_content li {
@@ -44,7 +57,7 @@
 .legal_notice_wrapper {
     width: 100%;
     max-width: 1440px;
-    padding: 0 24px;
+    padding: 0 40px;
     margin: 0 auto;
     display:flex; 
     flex-direction: column; 
@@ -71,109 +84,78 @@
 }
 
 .legal_notice_text {
-    font-size: 16px; 
+    font-size: 19px; 
     font-weight: 400;
     font-family: Open Sans;
-    line-height: 120%;
+    line-height: 140%;
     letter-spacing: 0%;
     margin-top:0; 
-    margin-bottom:10px; 
+    margin-bottom:30px; 
 }
 
 .privacy_policy_section {
     display:flex; 
-    height: calc(100vh - 291px);
+    min-height: calc(100vh - 291px);
+    height: auto;
 }
 
 .privacy_policy_wrapper {
     width: 100%;
     max-width: 1440px;
-    padding: 0 24px;
+    padding: 0 40px;
     margin: 0 auto;
     display:flex; 
     flex-direction: column; 
 }
 
-@media (max-width: 1450px) {
-
-
-    .contact_inner {
-        width: calc(100% - 400px);
-        margin: 0 auto;
-    }
-
-    .contact_content {
-        display: flex;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 100px;
-        width: 100%;
-    }
-
-    .contact_description {
-        width: auto;
-    }
-
-    .purple_shadow_contact {
-        position: absolute;
-        top: 10px;
-        right: 0;
-    }
-
-    .up_btn {
-        position: absolute;
-        top: 1000px;
-        right: 100px;
-
-    }
-
-    .contact_section {
-        margin-bottom: 150px;
-    }
-
-    .contact_section_title {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 50px;
-        width: 100%;
-        position: relative;
-        z-index: 10;
-        margin-bottom: 30px;
-    }
-
+.back_btn_link {
+   display: none; 
 }
 
-
-@media (max-width: 1150px) {
-
+.back_btn {
+    width:39px; 
+    height: 39px;
 }
 
 
 @media (max-width: 1024px) {
 
+    .back_btn_link {
+   display: flex;
+   justify-content: flex-end; 
+   margin-top: 120px; 
+}
+
+.legal_notice_head h5{
+    margin-top: 0px; 
+}
+
+.privacy_policy_head h5{
+    margin-top: 0px; 
+}
+
+.violet_line_legal_notice, .violet_line_legal_notice2, .violet_line_privacy, .violet_line_privacy2 {
+    top:35%; 
+}
 
 }
 
-@media (max-width: 800px) {
-
-}
-
-@media (max-width: 650px) {
-
-
-}
-
-
-@media (max-width: 570px) {
-
+@media (max-width: 620px) {
 }
 
 
 @media (max-width: 460px) {
+    .legal_notice_head h5 {
+        font-size: 42px;
+    }
 
+     .privacy_policy_head h5 {
+        font-size: 38px;
+    }
+
+    .different_font_size_h4 {
+    font-size: 24px;
+    margin: 0; }
  
 }
 

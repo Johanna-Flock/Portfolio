@@ -19,7 +19,7 @@
 .about_wave {
     position: absolute;
     left: 0;
-    top: 68%;
+    top: 75%;
     width: 100%;
     height: auto;
     z-index: 3;
@@ -72,7 +72,7 @@
 
 .about_content p {
     margin-bottom: 50px;
-    margin-top: 30px;
+    margin-top: 50px;
     font-family: Poppins;
     font-weight: 400;
     line-height: 120%;
@@ -82,7 +82,7 @@
 @media (max-width: 1800px) {
 
     .about_wave {
-        top: 75%;
+        top: 78%;
     }
 
 }
@@ -90,7 +90,7 @@
 @media (max-width: 1450px) {
 
     .about_wave {
-        top: 35%;
+        top: 40%;
         z-index: 3;
     }
 
@@ -137,7 +137,7 @@
     }
 
     .about_wave {
-        top: 32%;
+        top: 36%;
         z-index: 3;
     }
 
@@ -155,7 +155,7 @@
     }
 
     .about_wave {
-        top: 31%;
+        top: 34%;
         z-index: 3;
     }
 
@@ -169,13 +169,20 @@
     }
 
     .about_wave {
-        top: 30%;
+        top: 33%;
         z-index: 3;
     }
 
     .about_content {
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .picture {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 0px;
+        z-index: 1;
     }
 
 }
@@ -200,6 +207,12 @@
         gap: 10px;
     }
 
+    
+    .about_wave {
+        top: 37%;
+        z-index: 3;
+    }
+
 }
 
 
@@ -211,7 +224,7 @@
     }
 
     .about_wave {
-        top: 27%;
+        top: 31%;
         z-index: 3;
     }
 
@@ -224,7 +237,7 @@
     }
 
     .about_wave {
-        top: 19%;
+        top: 23%;
         z-index: 3;
     }
 
@@ -233,7 +246,7 @@
 @media (max-width: 380px) {
 
     .about_wave {
-        top: 16%;
+        top: 23%;
         z-index: 3;
     }
 

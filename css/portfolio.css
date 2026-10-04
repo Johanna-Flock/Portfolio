@@ -44,7 +44,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     gap: 30px;
     position: relative;
 }
@@ -430,6 +430,12 @@
         margin-bottom: 0px;
     }
 
+    .project_overlay p {
+        font-size: 20px;
+        width: 390px;
+
+    }
+
 }
 
 @media (max-width: 650px) {
@@ -480,6 +486,34 @@
     .project_card {
         height: 300px;
         width: 300px;
+    }
+
+    .project_overlay p {
+        font-size: 16px;
+        width: 290px;
+        margin-bottom: 10px;
+    }
+
+    .project_description h4 {
+        margin-bottom: 5px;
+        font-size: 20px;
+    }
+
+    .project_description {
+        padding-top: 10px;
+    }
+
+    .project_buttons {
+        margin-top: 35px;
+        display: flex;
+        gap: 20px;
+        font-size: 16px;
+        color: white;
+    }
+
+    .project_btn {
+        width: 124px; 
+        height: 49px; 
     }
 
     .shadow_portfolio_green {

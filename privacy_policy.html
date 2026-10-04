@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio</title>
+    <title>Privacy Policy</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/sections.css">
@@ -21,21 +21,21 @@
         <nav class="navbar">
             <div class="navbar_container">
                 <div class="navbar_name">
-                    <a href="#hero" class="nav_hero">
-                        <img src="icons/Johannalogo_version3.png" alt="Johanna Flock" class="nav_hero_img">
+                    <a href="index.html#hero" class="nav_hero">
+                        <img src="icons/Johannalogo.png" alt="Johanna Flock" class="nav_hero_img">
                     </a>
                 </div>
                 <div class="navbar_menu">
                     <div class="nav_links">
-                        <a href="#about" class="nav_btn subtitles" data-i18n="aboutTitle">
+                        <a href="index.html#about" class="nav_btn subtitles" data-i18n="aboutTitle">
                             About me
                         </a>
 
-                        <a href="#portfolio" class="nav_btn subtitles" data-i18n="portfolioTitle">
+                        <a href="index.html#portfolio" class="nav_btn subtitles" data-i18n="portfolioTitle">
                             Portfolio
                         </a>
 
-                        <a href="#contact" class="nav_btn subtitles" data-i18n="contactTitle">
+                        <a href="index.html#contact" class="nav_btn subtitles" data-i18n="contactTitle">
                             Contact
                         </a>
                     </div>
@@ -66,15 +66,15 @@
 
                     <div class="mobile_nav_links">
 
-                        <a href="#about" class="nav_btn subtitles mobile_nav_btn" data-i18n="aboutTitle">
+                        <a href="index.html#about" class="nav_btn subtitles mobile_nav_btn" data-i18n="aboutTitle">
                             About me
                         </a>
 
-                        <a href="#portfolio" class="nav_btn subtitles mobile_nav_btn" data-i18n="portfolioTitle">
+                        <a href="index.html#portfolio" class="nav_btn subtitles mobile_nav_btn" data-i18n="portfolioTitle">
                             Portfolio
                         </a>
 
-                        <a href="#contact" class="nav_btn subtitles mobile_nav_btn" data-i18n="contactTitle">
+                        <a href="index.html#contact" class="nav_btn subtitles mobile_nav_btn" data-i18n="contactTitle">
                             Contact
                         </a>
 
@@ -101,12 +101,15 @@
 
     <section class="privacy_policy_section">
         <div class="privacy_policy_wrapper">
-            <div class="legal_notice_head">
-                <div class="violet_line_legal_notice"></div>
-                <h5>Privacy Policy</h5>
-                <div class="violet_line_legal_notice2"></div>
+             <a href="index.html" class="back_btn_link" >
+                <img src="icons/goback.svg" alt="Back Button" class="back_btn">
+            </a>
+            <div class="privacy_policy_head">
+                <div class="violet_line_privacy"></div>
+                <h5 data-i18n="privacyPolicy">Privacy Policy</h5>
+                <div class="violet_line_privacy2"></div>
             </div>
-            <p class="legal_notice_text">This website is intended to showcase my work and projects.
+            <p class="legal_notice_text" data-i18n="privacyPolicyText">This website is intended to showcase my work and projects.
 
                 If you contact me using the contact form, the information you provide, including your name, email
                 address, and message, will only be used to respond to your inquiry. Your personal data will not be
@@ -128,15 +131,12 @@
     <footer class="portfolio_footer">
         <div class="footer_wrapper">
             <div class="footer_links">
-                <a href="#hero" class="nav_hero"><img src="icons/Johannalogo_version3.png" alt="Johanna Flock"
-                        class="nav_hero_img"></a>
-                <a href="legal_notice.html">
-                    <p>Legal Notice</p>
+                <a href="index.html#hero" class="nav_hero">
+                    <img src="icons/Johannalogo.png" alt="Johanna Flock" class="nav_hero_img">
                 </a>
-                <a href="privacy_policy.html">
-                    <p>Privacy Policy</p>
+                <a href="legal_notice.html" class="footer_link">
+                    Legal Notice
                 </a>
-
             </div>
             <p>&copy; Johanna 2026</p>
             <div class="footer_social_media">
@@ -148,17 +148,43 @@
                     <img src="icons/email button.png" alt="Email" class="social_media_icon">
                 </a>
 
-                <a href="https://www.linkedin.com/in/dein-profil/" target="_blank">
+                <a href="https://www.linkedin.com" target="_blank">
                     <img src="icons/linkedin button.png" alt="LinkedIn" class="social_media_icon">
                 </a>
+            </div>
+        </div>
+        <div class="footer_wrapper_mobile">
+
+            <a href="index.html#hero" class="nav_hero">
+                <img src="icons/Johannalogo.png" alt="Johanna Flock" class="nav_hero_img">
+            </a>
+            <p>&copy; Johanna 2026</p>
+            <div class="footer_social_media">
+                <a href="https://github.com/Johanna-Flock" target="_blank">
+                    <img src="icons/github button.png" alt="GitHub" class="social_media_icon">
+                </a>
+
+                <a href="mailto:johanna.j.f@web.de">
+                    <img src="icons/email button.png" alt="Email" class="social_media_icon">
+                </a>
+
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="icons/linkedin button.png" alt="LinkedIn" class="social_media_icon">
+                </a>
+            </div>
+
+            <div class="footer_links">
+                <a href="legal_notice.html" class="footer_link">
+                    Legal Notice
+                </a>
+
             </div>
 
         </div>
 
     </footer>
     <script src="js/script.js"></script>
-    <script src="js/contact_form.js"></script>
     <script src="js/translation.js"></script>
-    </body>
+</body>
 
 </html>
