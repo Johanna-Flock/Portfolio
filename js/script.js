@@ -247,7 +247,6 @@ function updateLegalNoticeLines() {
     });
 }
 
-
 /**
  * Controls the mobile navigation menu and burger button.
  * Toggles the menu open or closed when the burger button is clicked.

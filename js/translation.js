@@ -190,7 +190,6 @@ languageButtons.forEach(button => {
             btn.classList.remove("active_language_button");
         });
         button.classList.add("active_language_button");
-
     });
 });
 

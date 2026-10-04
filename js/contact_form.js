@@ -4,7 +4,6 @@ const nameSuccessIcon = nameInput.parentElement.querySelector(".success_icon");
 const nameRequiredMessage = nameInput.parentElement.querySelector(".required_message");
 const nameInvalidMessage = nameInput.parentElement.querySelector(".invalid_message");
 
-
 const emailInput = document.getElementById("email");
 const emailErrorIcon = emailInput.parentElement.querySelector(".error_icon");
 const emailSuccessIcon = emailInput.parentElement.querySelector(".success_icon");
@@ -17,7 +16,13 @@ const messageSuccessIcon = messageInput.parentElement.querySelector(".success_ic
 const messageRequiredMessage = messageInput.parentElement.querySelector(".required_message");
 const messageInvalidMessage = messageInput.parentElement.querySelector(".invalid_message");
 
-
+/**
+ * Validates the privacy checkbox and all contact form fields.
+ * Stops the submission if any required field is invalid.
+ * Collects the name, email address, and message from the form.
+ * Sends the form data to the contact.php backend using POST.
+ * Displays a success or error message based on the server response.
+ */
 
 async function sendMail() {
     const privacyCheckbox = document.querySelector('input[name="privacy"]');
@@ -60,7 +65,13 @@ async function sendMail() {
     }
 }
 
-//Focus
+/**
+ * Validates the name input when it receives focus.
+ * Checks whether the input field is empty or contains only spaces.
+ * Adds the error class when no name has been entered.
+ * Displays the required message and error icon.
+ * Helps the user immediately recognize the missing required field.
+ */
 
 nameInput.addEventListener("focus", function () {
     console.log("FOCUS");
@@ -71,6 +82,14 @@ nameInput.addEventListener("focus", function () {
     }
 });
 
+/**
+ * Validates the email input when it receives focus.
+ * Checks whether the input field is empty or contains only spaces.
+ * Adds the error class when no email address has been entered.
+ * Displays the required message and error icon.
+ * Helps the user recognize that the email field is required.
+ */
+
 emailInput.addEventListener("focus", function () {
     if (emailInput.value.trim() === "") {
         emailInput.classList.add("error");
@@ -78,6 +97,14 @@ emailInput.addEventListener("focus", function () {
         emailRequiredMessage.style.display = "block";
     }
 });
+
+/**
+ * Validates the message input when it receives focus.
+ * Checks whether the input field is empty or contains only spaces.
+ * Adds the error class when no message has been entered.
+ * Displays the required message and error icon.
+ * Helps the user recognize that the message field is required.
+ */
 
 messageInput.addEventListener("focus", function () {
     if (messageInput.value.trim() === "") {
@@ -87,7 +114,13 @@ messageInput.addEventListener("focus", function () {
     }
 });
 
-//Input
+/**
+ * Hides validation messages while the user edits the name field.
+ * Removes the required and invalid messages after new input.
+ * Hides validation messages while the user edits the email field.
+ * Removes the required and invalid messages after new input.
+ * Also clears both messages while the user edits the message field.
+ */
 
 nameInput.addEventListener("input", function () {
     nameRequiredMessage.style.display = "none";
@@ -105,10 +138,13 @@ messageInput.addEventListener("input", function () {
     messageInvalidMessage.style.display = "none";
 });
 
-
-//Validierung der Formulardaten - Blur-Eventlistener für die Eingabefelder
-
-
+/**
+ * Validates the name field when the user leaves the input.
+ * Resets all previous validation states and messages.
+ * Shows an error when the field is empty or the name is too short.
+ * Shows a success state when the entered name is valid.
+ * Returns true for valid input and false for invalid input.
+ */
 
 nameInput.addEventListener("blur", validateName);
 
@@ -141,6 +177,14 @@ function validateName() {
     return true;
 }
 
+/**
+ * Validates the email field when the user leaves the input.
+ * Resets all previous validation states, icons, and messages.
+ * Shows an error when the field is empty or the email format is invalid.
+ * Shows a success state when the entered email address is valid.
+ * Returns true for valid input and false for invalid input.
+ */
+
 emailInput.addEventListener("blur", validateEmail);
 
 function validateEmail() {
@@ -167,6 +211,14 @@ function validateEmail() {
     emailSuccessIcon.style.display = "block";
     return true;
 }
+
+/**
+ * Validates the message field when the user leaves the input.
+ * Resets all previous validation states, icons, and messages.
+ * Shows an error when the field is empty or the message is too short.
+ * Shows a success state when the message contains at least 10 characters.
+ * Returns true for valid input and false for invalid input.
+ */
 
 messageInput.addEventListener("blur", validateMessage);
 
@@ -195,6 +247,14 @@ function validateMessage() {
     messageSuccessIcon.style.display = "block";
     return true;
 }
+
+/**
+ * Updates the submit button when the privacy checkbox changes.
+ * Checks whether the user has accepted the privacy policy.
+ * Adds the active class when the checkbox is selected.
+ * Removes the active class when the checkbox is unchecked.
+ * Controls the visual state of the submit button.
+ */
 
 const privacyCheckbox = document.querySelector(".input_checkbox");
 const submitButton = document.querySelector(".submit_btn");
