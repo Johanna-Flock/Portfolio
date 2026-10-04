@@ -108,7 +108,7 @@ a {
     font: inherit;
     cursor: pointer;
     font-weight: 600;
-    color:white; 
+    color: white;
     font-size: 23px;
 }
 
@@ -116,7 +116,6 @@ a {
 .mobile_menu_overlay {
     display: none;
 }
-
 
 @media (max-width: 1024px) {
 
@@ -218,7 +217,8 @@ a {
     }
 
     .mobile_language_switch .active_language_button {
-    color: #70E61C;
-    background-color: transparent;
-}
+        color: #70E61C;
+        background-color: transparent;
+    }
+
 }

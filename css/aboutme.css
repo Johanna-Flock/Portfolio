@@ -161,7 +161,6 @@
 
 }
 
-
 @media (max-width: 800px) {
 
     .aboutme_img {
@@ -207,15 +206,12 @@
         gap: 10px;
     }
 
-    
     .about_wave {
         top: 37%;
         z-index: 3;
     }
 
 }
-
-
 
 @media (max-width: 570px) {
 
