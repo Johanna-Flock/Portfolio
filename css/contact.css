@@ -310,7 +310,7 @@
     flex-direction:column;
     justify-content:center; 
     align-items:center;
-    gap: 70px;
+    gap: 40px;
 }
 
 @media (max-width: 1450px) {
@@ -486,7 +486,7 @@
 
     .up_btn {
         position: absolute;
-        top: 930px;
+        top: 950px;
         right: 20px;
     }
 

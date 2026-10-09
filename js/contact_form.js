@@ -339,13 +339,16 @@ function validateMessage() {
  * Controls the visual state of the submit button.
  */
 
+
 const privacyCheckbox = document.querySelector(".input_checkbox");
 const submitButton = document.querySelector(".submit_btn");
 
 privacyCheckbox.addEventListener("change", function () {
     if (privacyCheckbox.checked) {
         submitButton.classList.add("active");
+        submitButton.disabled = false;
     } else {
         submitButton.classList.remove("active");
+        submitButton.disabled = true;
     }
 });
