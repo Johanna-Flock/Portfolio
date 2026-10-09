@@ -16,55 +16,28 @@ const messageSuccessIcon = messageInput.parentElement.querySelector(".success_ic
 const messageRequiredMessage = messageInput.parentElement.querySelector(".required_message");
 const messageInvalidMessage = messageInput.parentElement.querySelector(".invalid_message");
 
+
 /**
- * Validates the privacy checkbox and all contact form fields.
- * Sends the form data to the contact.php backend using POST.
- * Displays feedback and resets the form after successful submission.
+ * Validates the contact form, sends the message to the server,
+ * and displays feedback depending on the result.
+ * Disables the submit button while the request is in progress.
+ *
+ * @async
+ * @returns {Promise<void>}
  */
-
 async function sendMail() {
-    const privacyCheckbox = document.querySelector(
-        'input[name="privacy"]'
-    );
-    const privacyError = document.querySelector(".privacy_error");
+    if (!validateContactForm()) return;
+
     const form = document.querySelector(".contact_form");
+    const privacyCheckbox = document.querySelector(".input_checkbox");
     const submitButton = form.querySelector(".submit_btn");
-
-    if (!privacyCheckbox.checked) {
-        privacyError.style.display = "block";
-        return;
-    }
-
-    privacyError.style.display = "none";
-
-    if (
-        !validateName() ||
-        !validateEmail() ||
-        !validateMessage()
-    ) {
-        return;
-    }
-
-    const data = {
-        name: nameInput.value,
-        email: emailInput.value,
-        message: messageInput.value
-    };
 
     submitButton.disabled = true;
 
     try {
-        const response = await fetch("contact.php", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        });
+        const result = await submitContactForm();
 
-        const result = await response.json();
-
-        if (response.ok && result.success) {
+        if (result.success) {
             resetContactForm();
             showFeedback("success");
         } else {
@@ -78,6 +51,57 @@ async function sendMail() {
     }
 }
 
+/**
+ * Validates the privacy checkbox and all contact form fields.
+ * Displays the privacy error message if consent has not been given.
+ *
+ * @returns {boolean} True if all validations pass, otherwise false.
+ */
+
+function validateContactForm() {
+    const privacyCheckbox = document.querySelector(".input_checkbox");
+    const privacyError = document.querySelector(".privacy_error");
+
+    if (!privacyCheckbox.checked) {
+        privacyError.style.display = "block";
+        return false;
+    }
+    privacyError.style.display = "none";
+    return (
+        validateName() &&
+        validateEmail() &&
+        validateMessage()
+    );
+}
+
+/**
+ * Sends the contact form data to the PHP backend using a POST request.
+ * Parses the JSON response and throws an error if the request fails.
+ *
+ * @async
+ * @returns {Promise<Object>} The parsed JSON response from the server.
+ * @throws {Error} If the request fails or the server reports an error.
+ */
+
+async function submitContactForm() {
+    const data = {
+        name: nameInput.value,
+        email: emailInput.value,
+        message: messageInput.value
+    };
+    const response = await fetch("contact.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    });
+    const result = await response.json();
+    if (!response.ok || !result.success) {
+        throw new Error("Message could not be sent.");
+    }
+    return result;
+}
 
 /**
  * Resets the contact form and hides all validation messages and icons.

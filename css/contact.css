@@ -252,7 +252,6 @@
     box-shadow: 4px 4px 4px 0px #00000040;
     transition: transform 0.2s ease, background-color 0.2s ease;
     cursor: not-allowed;
-    pointer-events: none;
 }
 
 .contact_problem_to_solve {
@@ -299,7 +298,6 @@
 .submit_btn.active {
     background-color: #70E61C;
     cursor: pointer;
-    pointer-events: auto;
 }
 
 .submit_btn.active:hover {
