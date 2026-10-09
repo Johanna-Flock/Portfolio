@@ -101,6 +101,10 @@ const translations = {
         currency: "Aktualität",
         currency_text: "  Diese Datenschutzerklärung kann angepasst werden, wenn sich die technische Umsetzung dieser Website oder die rechtlichen Anforderungen ändern. Es gilt jeweils die auf dieser Website veröffentlichte aktuelle Fassung.",
 
+        feedbackSuccessTitle: "Nachricht gesendet!",
+        feedbackSuccessMessage: "Vielen Dank! Deine Nachricht wurde erfolgreich gesendet. Ich werde mich bald bei dir melden.",
+        feedbackErrorTitle: "Ups, etwas ist schiefgelaufen",
+        feedbackErrorMessage: "Deine Nachricht konnte nicht gesendet werden. Bitte versuche es erneut."
     },
 
     en: {
@@ -198,7 +202,12 @@ const translations = {
         contact_policy: "Contact",
         contact_policy_text: "If you have any questions regarding data protection, you can contact me at the following email address: johanna-X@mustermail.de",
         currency: "Current Status",
-        currency_text: "This Privacy Policy may be updated if the technical implementation of this website or the legal requirements change. The current version published on this website shall apply."
+        currency_text: "This Privacy Policy may be updated if the technical implementation of this website or the legal requirements change. The current version published on this website shall apply.",
+
+        feedbackSuccessTitle: "Message sent!",
+        feedbackSuccessMessage: "Thank you! Your message has been sent successfully. I will contact you soon.",
+        feedbackErrorTitle: "Sorry, something went wrong",
+        feedbackErrorMessage: "Your message could not be sent. Please try again."
     }
 
 };

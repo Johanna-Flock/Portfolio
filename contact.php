@@ -1,93 +1,200 @@
 <?php
 
-// CORS headers (for Angular / frontend apps)
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Methods: POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type");
-header("Content-Type: application/json; charset=utf-8");
+/**
+ * Contact form handler for the portfolio website.
+ *
+ * Processes contact form submissions, validates the submitted
+ * data, and sends the message as an HTML email using PHP mail().
+ *
+ * Expected JSON request fields:
+ * - name: Name of the person submitting the form
+ * - email: Email address of the sender
+ * - message: Content of the message
+ *
+ * Returns a JSON response indicating the result of the operation.
+ *
+ * Note:
+ * A successful call to mail() does not guarantee that the email
+ * will be delivered to the recipient's inbox.
+ *
+ * @package Portfolio
+ * @version 1.0.0
+ */
 
-// ------------------------------------------------------------
-// WICHTIG:
-// Deine eigene Adresse in Zeile 15 setzen!
-// ------------------------------------------------------------
+header('Content-Type: application/json; charset=UTF-8');
 
-// >>> DEINE EMAIL HIER EINTRAGEN <<<
-$siteEmail = "johanna.j.f@web.de";
+/**
+ * Allowed frontend origin.
+ *
+ * Must exactly match the website origin from which the contact
+ * form sends requests to this PHP script.
+ *
+ * @var string
+ */
+$allowedOrigin = 'https:johanna-flock.de';
 
-switch ($_SERVER['REQUEST_METHOD']) {
+if (
+    isset($_SERVER['HTTP_ORIGIN']) &&
+    $_SERVER['HTTP_ORIGIN'] === $allowedOrigin
+) {
+    header('Access-Control-Allow-Origin: ' . $allowedOrigin);
+}
 
-    case 'OPTIONS':
-        // Preflight request
-        http_response_code(200);
-        exit;
+header('Vary: Origin');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
 
-    case 'POST':
-        // Read raw JSON payload
-        $json = file_get_contents('php://input');
-        $params = json_decode($json);
+/**
+ * Handles CORS preflight requests.
+ */
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(204);
+    exit;
+}
 
-        // Saubere JSON-Fehlerprüfung
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            http_response_code(400);
-            echo json_encode(['success' => false, 'error' => 'Invalid JSON']);
-            exit;
-        }
+/**
+ * Allows only POST requests for email submission.
+ */
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Method not allowed.'
+    ]);
+    exit;
+}
 
-        $email = $params->email ?? '';
-        $name = $params->name ?? '';
-        $userMessage = $params->message ?? '';
+/**
+ * Sender and recipient email addresses.
+ *
+ * Email forwarding to the personal inbox is configured
+ * separately through the netcup control panel.
+ *
+ * @var string $sender
+ * @var string $recipient
+ */
+$sender = 'kontakt@johanna-flock.de';
+$recipient = 'kontakt@johanna-flock.de';
 
-        // Basic validation
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL) || empty($name) || empty($userMessage)) {
-            http_response_code(400);
-            echo json_encode(['success' => false, 'error' => 'Invalid input data']);
-            exit;
-        }
+/**
+ * Reads and decodes the JSON request body.
+ *
+ * @var array<string, mixed>|null $data
+ */
+$data = json_decode(file_get_contents('php://input'), true);
 
-        // Sanitize content
-        $safeName = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
-        $safeEmail = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
-        $safeMessage = nl2br(htmlspecialchars($userMessage, ENT_QUOTES, 'UTF-8'));
+if (!is_array($data)) {
+    http_response_code(400);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Invalid request.'
+    ]);
+    exit;
+}
 
-        // Empfängeradresse (nutzt die oben definierte Mail)
-        $recipient = $siteEmail; 
-        $subject = 'Website Contact Form';
+/**
+ * Extracts and trims the submitted form fields.
+ *
+ * @var string $name
+ * @var string $email
+ * @var string $message
+ */
+$name = trim($data['name'] ?? '');
+$email = trim($data['email'] ?? '');
+$message = trim($data['message'] ?? '');
 
-        $mailBody = "
-            <strong>Name:</strong> {$safeName}<br>
-            <strong>Email:</strong> {$safeEmail}<br><br>
-            <strong>Message:</strong><br>
-            {$safeMessage}
-        ";
+/**
+ * Validates the submitted data and enforces length limits.
+ *
+ * Invalid submissions receive an HTTP 400 response.
+ */
+if (
+    $name === '' ||
+    !filter_var($email, FILTER_VALIDATE_EMAIL) ||
+    $message === '' ||
+    strlen($name) > 200 ||
+    strlen($email) > 254 ||
+    strlen($message) > 10000 ||
+    preg_match('/[\r\n]/', $email)
+) {
+    http_response_code(400);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Please check your input.'
+    ]);
+    exit;
+}
 
-        // Mail headers
-        $headers = [];
-        $headers[] = 'MIME-Version: 1.0';
-        $headers[] = 'Content-type: text/html; charset=utf-8';
-        $headers[] = 'From: Website Kontakt <' . $siteEmail . '>'; 
-        $headers[] = 'Reply-To: ' . $email;
-        $headers[] = 'Return-Path: ' . $siteEmail; 
+/**
+ * Defines the email subject and HTML body.
+ *
+ * User-provided values are escaped to prevent them from
+ * being interpreted as HTML markup.
+ *
+ * @var string $subject
+ * @var string $body
+ */
+$subject = 'New message from the website contact form';
 
-        // Send mail
-        $success = mail(
-            $recipient,
-            $subject,
-            $mailBody,
-            implode("\r\n", $headers),
-            '-f ' . $siteEmail 
-        );
+$body = '
+<html>
+<body>
+    <h2>New contact request</h2>
+    <p><strong>Name:</strong> ' .
+    htmlspecialchars($name, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') .
+    '</p>
+    <p><strong>Email:</strong> ' .
+    htmlspecialchars($email, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') .
+    '</p>
+    <p><strong>Message:</strong><br>' .
+    nl2br(htmlspecialchars($message, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')) .
+    '</p>
+</body>
+</html>
+';
 
-        if ($success) {
-            echo json_encode(['success' => true]);
-        } else {
-            http_response_code(500);
-            echo json_encode(['success' => false, 'error' => 'Mail delivery failed']);
-        }
+/**
+ * Defines the email headers.
+ *
+ * Reply-To allows the recipient to reply directly
+ * to the person who submitted the contact form.
+ *
+ * @var string[] $headers
+ */
+$headers = [
+    'MIME-Version: 1.0',
+    'Content-Type: text/html; charset=UTF-8',
+    'From: Website Contact <' . $sender . '>',
+    'Reply-To: ' . $email
+];
 
-        break;
+/**
+ * Passes the email to the configured mail server.
+ *
+ * @var bool $sent True if mail() accepts the message for processing.
+ */
+$sent = mail(
+    $recipient,
+    '=?UTF-8?B?' . base64_encode($subject) . '?=',
+    $body,
+    implode("\r\n", $headers)
+);
 
-    default:
-        http_response_code(405);
-        echo json_encode(['success' => false, 'error' => 'Method not allowed']);
-        exit;
+/**
+ * Returns the result as a JSON response.
+ *
+ * HTTP 200: The mail server accepted the message for processing.
+ * HTTP 500: The message could not be accepted for processing.
+ */
+if ($sent) {
+    echo json_encode([
+        'success' => true,
+        'message' => 'Your message has been sent.'
+    ]);
+} else {
+    http_response_code(500);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Your message could not be sent.'
+    ]);
 }

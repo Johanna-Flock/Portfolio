@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="navbar">
@@ -252,7 +253,7 @@
                 </div>
                 <div class="skills_grid">
                     <div class="skill_card">
-                        <img src=ico/scrum.png" alt="Scrum">
+                        <img src="ico/scrum.png" alt="Scrum">
                         <p>Scrum</p>
                     </div>
                     <div class="skill_card">
@@ -535,7 +536,31 @@
             </div>
         </div>
     </section>
+    <div id="feedbackOverlay" class="feedback_overlay" aria-hidden="true" role="status" aria-live="polite">
+        <div class="feedback_box">
+            <div class="feedback_icon" aria-hidden="true"></div>
 
+            <div class="feedback_content feedback_success">
+                <h2 class="feedback_title" data-i18n="feedbackSuccessTitle">
+                    Message sent!
+                </h2>
+
+                <p class="feedback_message" data-i18n="feedbackSuccessMessage">
+                    Thank you! Your message has been sent successfully. I will contact you soon.
+                </p>
+            </div>
+
+            <div class="feedback_content feedback_error">
+                <h2 class="feedback_title" data-i18n="feedbackErrorTitle">
+                    Sry, something went wrong
+                </h2>
+
+                <p class="feedback_message" data-i18n="feedbackErrorMessage">
+                    Your message could not be sent. Please try again.
+                </p>
+            </div>
+        </div>
+    </div>
     <footer class="portfolio_footer">
         <div class="footer_wrapper">
             <div class="footer_links">
@@ -592,4 +617,5 @@
     <script src="js/contact_form.js"></script>
     <script src="js/translation.js"></script>
 </body>
+
 </html>

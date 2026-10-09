@@ -89,6 +89,81 @@ body {
     margin: 0;
 }
 
+.feedback_overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.feedback_overlay.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.feedback_box {
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    border: 5px solid #70E61C;
+    border-radius: 12px;
+    background: #141D2F;
+    color: white;
+    text-align: center;
+}
+
+.feedback_icon {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.feedback_title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.feedback_message {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.feedback_content {
+    display: none;
+}
+
+.feedback_overlay.success .feedback_success {
+    display: block;
+}
+
+.feedback_overlay.error .feedback_error {
+    display: block;
+}
+
+.feedback_overlay.success .feedback_icon::before {
+    content: "\2713";
+    color: #70E61C;
+}
+
+.feedback_overlay.error .feedback_icon::before {
+    content: "!";
+    color: #ff4d4d;
+}
+
+.submit_btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 @media (max-width: 1024px) {
 
     h2 {

@@ -18,20 +18,23 @@ const messageInvalidMessage = messageInput.parentElement.querySelector(".invalid
 
 /**
  * Validates the privacy checkbox and all contact form fields.
- * Stops the submission if any required field is invalid.
- * Collects the name, email address, and message from the form.
  * Sends the form data to the contact.php backend using POST.
- * Displays a success or error message based on the server response.
+ * Displays feedback and resets the form after successful submission.
  */
 
 async function sendMail() {
-    const privacyCheckbox = document.querySelector('input[name="privacy"]');
+    const privacyCheckbox = document.querySelector(
+        'input[name="privacy"]'
+    );
     const privacyError = document.querySelector(".privacy_error");
+    const form = document.querySelector(".contact_form");
+    const submitButton = form.querySelector(".submit_btn");
 
     if (!privacyCheckbox.checked) {
         privacyError.style.display = "block";
         return;
     }
+
     privacyError.style.display = "none";
 
     if (
@@ -48,21 +51,77 @@ async function sendMail() {
         message: messageInput.value
     };
 
-    const response = await fetch("contact.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    });
+    submitButton.disabled = true;
 
-    const result = await response.json();
+    try {
+        const response = await fetch("contact.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
 
-    if (result.success) {
-        alert("Nachricht gesendet!");
-    } else {
-        alert("Fehler.");
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+            resetContactForm();
+            showFeedback("success");
+        } else {
+            showFeedback("error");
+        }
+    } catch (error) {
+        console.error("Error sending the message:", error);
+        showFeedback("error");
+    } finally {
+        submitButton.disabled = !privacyCheckbox.checked;
     }
+}
+
+
+/**
+ * Resets the contact form and hides all validation messages and icons.
+ */
+
+function resetContactForm() {
+    const form = document.querySelector(".contact_form");
+    const submitButton = form.querySelector(".submit_btn");
+    submitButton.classList.remove("active");
+    submitButton.disabled = true;
+    form.reset();
+    form.querySelectorAll(".error_icon, .success_icon").forEach((icon) => {
+        icon.style.display = "none";
+    });
+    form.querySelectorAll(
+        ".required_message, .invalid_message, .privacy_error"
+    ).forEach((message) => {
+        message.style.display = "none";
+    });
+}
+
+let feedbackTimeout;
+
+/**
+ * Displays a feedback message and hides it automatically
+ * after two seconds.
+ *
+ * @param {"success" | "error"} type - Feedback type.
+ */
+
+function showFeedback(type) {
+    const overlay = document.querySelector("#feedbackOverlay");
+    if (!overlay) {
+        console.error("Feedback overlay not found.");
+        return;
+    }
+    clearTimeout(feedbackTimeout);
+    overlay.classList.remove("success", "error");
+    overlay.classList.add(type, "visible");
+    overlay.setAttribute("aria-hidden", "false");
+    feedbackTimeout = setTimeout(() => {
+        overlay.classList.remove("visible");
+        overlay.setAttribute("aria-hidden", "true");
+    }, 2000);
 }
 
 /**
