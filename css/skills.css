@@ -289,3 +289,46 @@
     }
 
 }
+
+.skill_card img {
+    display: inline-block;
+}
+
+.skill_card:hover img {
+    animation: skillIconBounce 0.5s ease;
+}
+
+@keyframes skillIconBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    35% {
+        transform: translateY(-12px);
+    }
+
+    65% {
+        transform: translateY(-5px);
+    }
+}
+
+.js-enabled .skills_container {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 1.3s ease,
+    transform 1.3s ease;
+}
+
+.skills_section.is-visible .skills_container {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-enabled .skills_container {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

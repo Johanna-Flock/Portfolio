@@ -1,18 +1,10 @@
-
 #about,
 #portfolio,
 #contact {
     scroll-margin-top: 130px;
 }
 
-.violet_line_legal_notice {
-    width: 130px;
-    height: 4px;
-    background-color: #9747FF;
-}
-
-.violet_line_legal_notice2 {
-    width: 500px;
-    height: 4px;
-    background-color: #9747FF;
+html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
 }

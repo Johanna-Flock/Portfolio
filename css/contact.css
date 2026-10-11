@@ -364,7 +364,6 @@
 
 }
 
-
 @media (max-width: 1150px) {
 
     .contact_content {
@@ -396,8 +395,6 @@
         right: -110px;
     }
 }
-
-
 
 @media (max-width: 1024px) {
 
@@ -494,4 +491,32 @@
         margin-right: 0px;
     }
 
+}
+
+.js-enabled .contact_section_title,
+.js-enabled .contact_description {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 1.3s ease,
+    transform 1.3s ease;
+}
+
+.contact_section.is-visible .contact_section_title,
+.contact_section.is-visible .contact_description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact_section.is-visible .contact_description {
+  transition-delay: 0.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-enabled .contact_section_title,
+  .js-enabled .contact_description {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

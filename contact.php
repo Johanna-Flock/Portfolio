@@ -31,13 +31,15 @@ header('Content-Type: application/json; charset=UTF-8');
  *
  * @var string
  */
-$allowedOrigin = 'https:johanna-flock.de';
+$allowedOrigins = [
+    'https://johanna-flock.de',
+    'https://www.johanna-flock.de'
+];
 
-if (
-    isset($_SERVER['HTTP_ORIGIN']) &&
-    $_SERVER['HTTP_ORIGIN'] === $allowedOrigin
-) {
-    header('Access-Control-Allow-Origin: ' . $allowedOrigin);
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+
+if (in_array($origin, $allowedOrigins, true)) {
+    header('Access-Control-Allow-Origin: ' . $origin);
 }
 
 header('Vary: Origin');

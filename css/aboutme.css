@@ -256,3 +256,31 @@
     }
 
 }
+
+.js-enabled .about_content,
+.js-enabled .picture {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 1.3s ease,
+    transform 1.3s ease;
+}
+
+.about_section.is-visible .about_content,
+.about_section.is-visible .picture {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about_section.is-visible .picture {
+  transition-delay: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-enabled .about_content,
+  .js-enabled .picture {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

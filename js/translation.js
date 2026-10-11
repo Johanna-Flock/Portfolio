@@ -225,18 +225,14 @@ function setLanguage(language) {
     elements.forEach(element => {
         const key = element.dataset.i18n;
         if (translations[language][key]) {
-
             if (element.placeholder !== undefined && element.tagName !== "BUTTON") {
                 element.placeholder = translations[language][key];
             }
-
             else {
                 element.textContent = translations[language][key];
             }
         }
-
     });
-
     localStorage.setItem("language", language);
     showReference(currentReference);
 }
@@ -301,13 +297,10 @@ mobileLanguageButtons.forEach(button => {
  */
 
 languageButtons.forEach(button => {
-
     if (button.dataset.language === savedLanguage) {
         button.classList.add("active_language_button");
     }
-
     else {
         button.classList.remove("active_language_button");
     }
-
 });

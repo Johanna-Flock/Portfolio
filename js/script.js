@@ -17,9 +17,7 @@ const observer = new IntersectionObserver((entries) => {
                     link.classList.add("active");
                 }
             });
-
         }
-
     });
 }, {
     threshold: 0.1
@@ -61,14 +59,11 @@ const referenceDots = document.querySelectorAll(".reference-dot");
 
 function showReference(index) {
     if (!referenceQuote || !referenceName || !referenceImage) {
-        return;
-    }
+        return;}
     const reference = references[index];
     const language = localStorage.getItem("language") || "en";
-    referenceQuote.textContent =
-        translations[language][reference.quote];
-    referenceName.textContent =
-        translations[language][reference.name];
+    referenceQuote.textContent = translations[language][reference.quote];
+    referenceName.textContent = translations[language][reference.name];
     referenceImage.src = reference.image;
     referenceDots.forEach((dot, dotIndex) => {
         dot.classList.remove("dotblue", "dotgreen", "dotpurple");
@@ -90,15 +85,12 @@ function showReference(index) {
  */
 
 const referenceNext = document.getElementById("referenceNext");
-
 if (referenceNext) {
     referenceNext.addEventListener("click", function () {
         currentReference++;
-
         if (currentReference >= references.length) {
             currentReference = 0;
         }
-
         showReference(currentReference);
     });
 }
@@ -111,70 +103,58 @@ if (referenceNext) {
  */
 
 const referencePrev = document.getElementById("referencePrev");
-
 if (referencePrev) {
     referencePrev.addEventListener("click", function () {
         currentReference--;
-
         if (currentReference < 0) {
             currentReference = references.length - 1;
         }
-
         showReference(currentReference);
     });
 }
 
-/**
- * Updates the width of a decorative line based on its position.
- * Calculates the available space between the line and the screen edge.
- * Supports positioning the line from either the left or right side.
- * Uses the given percentage to determine the line's starting position.
- * Prevents the line from extending beyond the screen boundaries.
- */
-
 const screenPadding = 24;
 const lineGap = 40;
+
+/**
+ * Calculates the horizontal starting position of a line.
+ *
+ * @param {DOMRect} rect - The bounding rectangle of the parent element.
+ * @param {'left' | 'right'} direction - The direction in which the line extends.
+ * @param {number} positionPercent - The horizontal position in percent.
+ * @returns {number} The starting position of the line in pixels.
+ */
+
+function getLineStart(rect, direction, positionPercent) {
+    const position =
+        positionPercent === 100
+            ? direction === "left"
+                ? rect.left
+                : rect.right
+            : rect.left + rect.width * positionPercent / 100;
+    return direction === "left"
+        ? position - lineGap
+        : position + lineGap;
+}
+
+/**
+ * Updates the width of a line based on its parent's position.
+ *
+ * @param {string} lineSelector - The CSS selector of the line element.
+ * @param {'left' | 'right'} direction - The direction in which the line extends.
+ * @param {number} positionPercent - The horizontal position in percent.
+ * @returns {void}
+ */
 
 function updateLineWidth(lineSelector, direction, positionPercent) {
     const line = document.querySelector(lineSelector);
     if (!line) return;
-    const parent = line.parentElement;
-    const parentRect = parent.getBoundingClientRect();
-    let lineStart;
-    if (direction === 'left') {
-        if (positionPercent === 100) {
-            lineStart = parentRect.left - lineGap;
-        } else {
-            lineStart =
-                parentRect.left +
-                (parentRect.width * positionPercent / 100) -
-                lineGap;
-        }
-
-        const width = Math.max(
-            0,
-            lineStart - screenPadding
-        );
-        line.style.width = `${width}px`;
-    }
-
-    if (direction === 'right') {
-        if (positionPercent === 100) {
-            lineStart = parentRect.right + lineGap;
-        } else {
-            lineStart =
-                parentRect.left +
-                (parentRect.width * positionPercent / 100) +
-                lineGap;
-        }
-
-        const width = Math.max(
-            0,
-            window.innerWidth - lineStart - screenPadding
-        );
-
-        line.style.width = `${width}px`;
-    }
+    const parentRect = line.parentElement.getBoundingClientRect();
+    const lineStart = getLineStart(parentRect, direction, positionPercent);
+    const width = direction === "left"
+        ? lineStart - screenPadding
+        : document.documentElement.clientWidth - lineStart - screenPadding;
+    line.style.width = `${Math.max(0, width)}px`;
 }
 
 /**
@@ -185,7 +165,6 @@ function updateLineWidth(lineSelector, direction, positionPercent) {
  */
 
 function updateAllLines() {
-
     updateLineWidth('.green_line', 'left', 100);
     updateLineWidth('.blue_line', 'right', 46);
     updateLineWidth('.violet_line', 'left', 100);
@@ -214,34 +193,17 @@ updateAllLines();
  * Keeps both legal notice and privacy policy responsive.
  */
 function updateLegalNoticeLines() {
-    const heads = document.querySelectorAll(
-        '.legal_notice_head, .privacy_policy_head'
-    );
-
+    const heads = document.querySelectorAll('.legal_notice_head, .privacy_policy_head');
     heads.forEach(head => {
         const title = head.querySelector('h5');
-
-        const leftLine = head.querySelector(
-            '.violet_line_legal_notice, .violet_line_privacy'
-        );
-
-        const rightLine = head.querySelector(
-            '.violet_line_legal_notice2, .violet_line_privacy2'
-        );
-
+        const leftLine = head.querySelector('.violet_line_legal_notice, .violet_line_privacy');
+        const rightLine = head.querySelector('.violet_line_legal_notice2, .violet_line_privacy2');
         if (!title || !leftLine || !rightLine) return;
-
         const headRect = head.getBoundingClientRect();
         const titleRect = title.getBoundingClientRect();
-
         const gap = 40;
-
-        const leftWidth =
-            titleRect.left - headRect.left - gap;
-
-        const rightWidth =
-            headRect.right - titleRect.right - gap;
-
+        const leftWidth = titleRect.left - headRect.left - gap;
+        const rightWidth = headRect.right - titleRect.right - gap;
         leftLine.style.width = `${Math.max(0, leftWidth)}px`;
         rightLine.style.width = `${Math.max(0, rightWidth)}px`;
     });
@@ -266,7 +228,6 @@ burgerMenu.addEventListener('click', () => {
     burgerMenu.setAttribute('aria-expanded', isOpen);
 });
 
-
 mobileNavLinks.forEach(link => {
     link.addEventListener('click', () => {
         burgerMenu.classList.remove('open');
@@ -275,3 +236,35 @@ mobileNavLinks.forEach(link => {
     });
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.documentElement.classList.add("js-enabled");
+
+  /**
+   * Adds a visibility animation to a section when it enters the viewport.
+   * The section is observed only until it becomes visible for the first time.
+   *
+   * @param {string} selector - The CSS selector of the section to observe.
+   * @param {number} [threshold=0.15] - The proportion of the section that must
+   * be visible before the animation is triggered.
+   * @returns {void}
+   */
+  function observeSection(selector, threshold = 0.15) {
+    const section = document.querySelector(selector);
+    if (!section) return;
+    if (!("IntersectionObserver" in window)) {
+      section.classList.add("is-visible");
+      return;}
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);}});},
+      { threshold }
+    );
+    observer.observe(section);}
+  observeSection(".about_section");
+  observeSection(".skills_section");
+  observeSection(".portfolio_section");
+  observeSection(".contact_section");});
