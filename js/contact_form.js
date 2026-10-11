@@ -157,7 +157,6 @@ function showFeedback(type) {
  */
 
 nameInput.addEventListener("focus", function () {
-    console.log("FOCUS");
     if (nameInput.value.trim() === "") {
         nameInput.classList.add("error");
         nameRequiredMessage.style.display = "block";

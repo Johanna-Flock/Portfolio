@@ -22,6 +22,8 @@
     position: absolute;
     top: -390px;
     right: 0;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .contact_section_title {
