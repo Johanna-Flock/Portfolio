@@ -6,7 +6,17 @@
     height: 110px;
     background: #141D2F;
     z-index: 10000;
+    transition: background 0.3s ease,
+                backdrop-filter 0.3s ease;
+    -webkit-backdrop-filter: blur(0);
 }
+
+.navbar.scrolled {
+    background: rgba(20, 29, 47, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
 
 .navbar_container {
     width: 100%;

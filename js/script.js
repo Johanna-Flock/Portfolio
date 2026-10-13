@@ -1,4 +1,19 @@
 /**
+ * Updates the navigation bar's appearance based on the scroll position.
+ *
+ * Adds the "scrolled" class when the page is scrolled more than 30 pixels
+ * and removes it when the page returns to the top.
+ *
+ * @returns {void}
+ */
+const navbar = document.querySelector(".navbar");
+function updateNavbar() {
+    navbar.classList.toggle("scrolled", window.scrollY > 30);
+}
+window.addEventListener("scroll", updateNavbar, { passive: true });
+updateNavbar();
+
+/**
  * Observes sections while the user scrolls through the page.
  * Detects which section is currently visible in the viewport.
  * Removes the active class from all navigation links.

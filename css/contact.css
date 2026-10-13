@@ -228,10 +228,6 @@
     top: 2px;
 }
 
-.checkbox_label p span {
-    color: #9747FF;
-}
-
 .privacy_error {
     display: none;
     color: #E61C40;
@@ -313,6 +309,23 @@
     justify-content:center; 
     align-items:center;
     gap: 40px;
+}
+
+.colorwhite {
+    color: white;
+}
+
+.colorpurple {
+    color: #9747FF;
+}
+
+a.colorpurple {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.colorpurple:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 1450px) {
