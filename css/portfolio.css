@@ -330,6 +330,14 @@
 
 @media (max-width: 1450px) {
 
+    .shadow_portfolio_blue {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: -200px;
+    width: 424px; 
+    }
+
     .portfolio_grid {
         height: auto;
     }
@@ -377,7 +385,6 @@
 
 }
 
-
 @media (max-width: 1024px) {
 
     .reference_text {
@@ -417,7 +424,6 @@
 @media (max-width: 800px) {
 
     .shadow_portfolio_blue {
-        top: -275px;
         width: 300px;
     }
 
@@ -547,6 +553,31 @@
     .portfolio_section {
         margin-top: 50px;
     }
+
+    .project_buttons {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+        font-size: 16px;
+        color: white;
+    }
+
+    .project_btn {
+        width: 100px; 
+        height: 40px; 
+    }
+
+    .project_description h4 {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }   
+
+    .project_overlay p {
+        font-size: 14px;
+        width: 240px;
+        margin-bottom: 10px;
+    }
+    
 
 }
 

@@ -5,6 +5,8 @@
 const translations = {
 
     de: {
+        
+        Iam: "Ich bin",
         aboutTitle: "Über mich",
         aboutText: "Hallo, ich bin Johanna und liebe es, Anwendungen zu entwickeln, die schlicht, übersichtlich und funktional sind. Im technischen Support arbeite ich täglich mit Kund:innen, verstehe ihre Anliegen und suche nach der besten, möglichen Lösung für ihre Anforderungen. Mein Ziel ist es, Software bereitzustellen, die Menschen tatsächlich weiterhilft.",
         problemSolvingText: "In einen richtigen Flow komme ich, wenn ich für Kund:innen passgenaue Funktionen entwickeln kann. Durch Feedback und Austausch finde ich heraus, welche Bedürfnisse und Herausforderungen ein Produkt lösen soll. Gute Software beginnt für mich mit dem Verständnis der Menschen, die sie nutzen.",
@@ -15,6 +17,7 @@ const translations = {
         skillsOfferStart: 'Lust auf',
         skillsNews: 'etwas Neues',
         skillsCurious: "Du hast eine spannende Technologie oder ein Projekt im Kopf?",
+        learningTooltip: "Das möchte ich lernen",
         portfolioText: "Entdecke meine Projekte und meine Fähigkeiten in Aktion.",
         portfolioPolloLoco: "Jump-and-Run-Spiel mit objektorientiertem Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Sauce zu sammeln und gegen die verrückten Hühner zu kämpfen.",
         portfolioPokedex: "Eine interaktive Pokémon-Bibliothek auf Basis der PokéAPI – entdecke, durchsuche und katalogisiere Informationen zu deinen Lieblings-Pokémon.",
@@ -108,7 +111,7 @@ const translations = {
     },
 
     en: {
-
+        Iam: "I am",
         aboutTitle: "About Me",
         aboutText: "Hello, I’m Johanna, and I love developing applications that are simple, clear, and functional. In technical support, I work with customers daily, understand their needs, and look for the best possible solution to meet their requirements. My goal is to create software that genuinely helps people.",
         problemSolvingText: "I get into a real flow when I can develop tailored features for customers. Through feedback and collaboration, I find out which needs and challenges a product should address. For me, good software starts with understanding the people who use it.",
@@ -119,6 +122,7 @@ const translations = {
         skillsOfferStart: 'Looking for',
         skillsNews: 'something new',
         skillsCurious: "Do you have an exciting technology or project in mind?",
+        learningTooltip: "I have a special interest in learning",
         portfolioText: "Explore a selection of my work here -Interact with projects to see my skills in action",
         portfolioPolloLoco: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy chicken.",
         portfolioPokedex: "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",

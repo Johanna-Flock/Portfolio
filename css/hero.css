@@ -337,9 +337,9 @@
 
 @media (max-width: 420px) {
 
-    .hero_content {
+    /* .hero_content {
         max-width: 300px;
-    }
+    } */
 
     .Iam {
         left: 0px;

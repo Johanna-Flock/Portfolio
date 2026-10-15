@@ -45,6 +45,8 @@
 
 .skills_grid {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 80px;
 }
@@ -123,12 +125,14 @@
     bottom: calc(100% + 15px);
     left: 50%;
     transform: translateX(-50%) translateY(8px);
-    width: 220px;
+    width: 188px;
+    height:129px;
     padding: 14px 10px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
     gap: 12px;
     background: #FFFFFF;
     color: #141D2F;
@@ -141,6 +145,13 @@
                 transform 0.25s ease,
                 visibility 0.25s ease;
     z-index: 100;
+}
+
+.learning_tooltip_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .learning_tooltip::after {
@@ -175,12 +186,20 @@
     line-height: 1.4;
 }
 
+.learning_tooltip p {
+    margin: 0;
+    font-size: 16px;
+}
+
 .learning_card:hover .learning_tooltip {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
 }
 
+ .all_skills_medium {
+    display: none;
+ }
 
 @media (max-width: 1450px) {
 
@@ -234,6 +253,10 @@
     }
 
     .all_skills {
+        display: none; 
+    }
+
+    .all_skills_medium {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -256,8 +279,6 @@
         margin-right: 100px;
     }
 }
-
-
 
 @media (max-width: 800px) {
 
@@ -301,7 +322,7 @@
         cursor: pointer;
     }
 
-    .all_skills {
+    .all_skills_medium {
         display: none;
     }
 
@@ -354,7 +375,7 @@
 @media (max-width: 380px) {
 
     .skills_section {
-        margin-bottom: 50px;
+        margin-bottom: 120px;
     }
 
 }
