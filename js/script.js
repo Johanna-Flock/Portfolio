@@ -128,7 +128,7 @@ if (referencePrev) {
     });
 }
 
-const screenPadding = 24;
+const screenPadding = 1;
 const lineGap = 40;
 
 /**

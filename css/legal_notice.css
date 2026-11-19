@@ -1,5 +1,6 @@
 .legal_notice_section {
     display: flex;
+    flex-direction: column;
     margin-bottom: 150px;
 }
 
@@ -59,6 +60,13 @@
     margin:0; 
 }
 
+.privacy_policy_content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+}
+
+
 .privacy_policy_wrapper li {
     margin-bottom: 5px;
 }
@@ -70,7 +78,7 @@
 .legal_notice_wrapper {
     width: 100%;
     max-width: 1440px;
-    padding: 0 40px;
+    padding: 0 1px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -79,6 +87,7 @@
 .legal_notice_content {
     display: flex;
     flex-direction: column;
+    padding: 0 40px;
 }
 
 .different_font_size_h4 {
@@ -127,9 +136,10 @@
     margin-bottom: 20px;
 }
 
-
 .privacy_policy_section {
     display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
     min-height: calc(100vh - 291px);
     height: auto;
 }
@@ -137,7 +147,7 @@
 .privacy_policy_wrapper {
     width: 100%;
     max-width: 1440px;
-    padding: 0 40px;
+    padding: 0 1px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -157,22 +167,7 @@
     .back_btn_link {
         display: flex;
         justify-content: flex-end;
-        margin-top: 120px;
-    }
-
-    .legal_notice_head h5 {
-        margin-top: 0px;
-    }
-
-    .privacy_policy_head h5 {
-        margin-top: 0px;
-    }
-
-    .violet_line_legal_notice,
-    .violet_line_legal_notice2,
-    .violet_line_privacy,
-    .violet_line_privacy2 {
-        top: 35%;
+        margin-right: 40px;
     }
 
 }
